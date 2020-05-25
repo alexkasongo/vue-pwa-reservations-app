@@ -44,19 +44,107 @@ import Restaurants from '@/components/Restaurants.vue';
     </div>
 
     <!-- locations dropdown -->
-    <!-- <div class="aselect" :data-value="value" :data-list="list">
-	    <div class="selector" @click="toggle()">
-	        <div class="label">
-				    <span>{{ value }}</span>
-	        </div>
-			<div class="arrow" :class="{ expanded : visible }"></div>
-	        <div :class="{ hidden : !visible, visible }">
-	            <ul>
-	                <li :class="{ current : item === value }" v-for="item in list" :key="item.id" @click="select(item)">{{ item }}</li>
-	            </ul>
-	        </div>
-	    </div>
-	</div> -->
+    <div class="container">
+        <div class="accordion">
+
+            <div class="option">
+                <input type="checkbox" id="toggle1" class="toggle" />
+                <label class="title" for="toggle1">Eastern Province</label>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="toggle2" class="toggle" />
+                <label class="title" for="toggle2">Kigali</label>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="toggle3" class="toggle" />
+                <label class="title" for="toggle3">Northern Province</label>
+                <div class="content">
+                   <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="toggle4" class="toggle" />
+                <label class="title" for="toggle4">Northern Province</label>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="toggle5" class="toggle" />
+                <label class="title" for="toggle5">Southern Province</label>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="toggle6" class="toggle" />
+                <label class="title" for="toggle6">Western Province</label>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Bugesera</a></li>
+                        <li><a href="#">Gatsibo</a></li>
+                        <li><a href="#">Kayonza</a></li>
+                        <li><a href="#">Kirehe</a></li>
+                        <li><a href="#">Ngoma</a></li>
+                        <li><a href="#">Nyagatare</a></li>
+                        <li><a href="#">Rwamagana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
   </div>
 </template>
@@ -66,7 +154,7 @@ export default {
     name: 'Restaurants',
     data() {
         return {
-            value: 'Kigali',
+            value: 'Kigali Restaurants',
             list: ["Orange","Apple","Kiwi", "Lemon", "Pineapple"],
             visible: false
         }
@@ -187,72 +275,84 @@ export default {
                 margin: 0px 0px 5px 0px;
             }
         }
+    }
 
-        // dropdown 
-        .aselect {
-            margin: 20px auto;
+$font-color: #000;
 
-            .selector {
-                border-bottom: 1px solid gainsboro;
-                // background: #F8F8F8;
-                position: relative;
-                z-index: 1;
-                .arrow {
-                    position: absolute;
-                    right: 10px;
-                    top: 40%;
-                    width: 0;
-                    height: 0;
-                    border-left: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                    border-top: 10px solid #888;
-                    transform: rotateZ(0deg) translateY(0px);
-                    transition-duration: 0.3s;
-                    transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
-                }
-                .expanded {
-                    transform: rotateZ(180deg) translateY(2px);
-                }
-                .label {
-                    display: block;
-                    padding: 12px 0px;
-                    font-size: 16px;
-                    color: #000;
-                }
-            }
+.accordion {
+  margin: 3em auto;
+  max-width: 30em;
+}
 
-            ul {
-                width: 100%;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                font-size: 16px;
-                // border: 1px solid gainsboro;
-                position: absolute;
-                z-index: 1;
-                background: #fff;
-            }
+.toggle {
+  display: none;
+}
 
-            li {
-                padding: 12px 0px;
-                color: #666;
-                &:hover {
-                    color: white;
-                    background: seagreen;
-                }
-            }
+.option {
+  position: relative;
+//   margin-bottom: 1em;
+}
 
-            .current {
-                background: #eaeaea;
-            }
+.title,
+.content {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
 
-            .hidden {
-                visibility: hidden;
-            }
+.title {
+  background: #fff;
+  padding: 1em 0em 0em 0em;
+  display: block;
+  color: $font-color;
+}
+.title:after, .title:before {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 1px;
+  height: 0.75em;
+  background-color: $font-color;
+  transition: all 0.2s;
+}
+.title:after {
+  transform: rotate(90deg);
+}
 
-            .visible {
-                visibility: visible;
-            }
+.content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  ul {
+    li {
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            color: #333;
         }
     }
+  }
+  p {
+    margin: 0;
+    padding: 0.5em 1em 1em;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+}
+
+.toggle:checked {
+    & + .title,
+    // & + .title + .content {
+    //     box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
+    // }
+    & + .title + .content {
+        max-height: 500px;
+    }
+    & + .title:before {
+        transform: rotate(90deg) !important;
+    }
+}
+
 </style>
