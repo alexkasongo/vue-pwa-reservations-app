@@ -38,9 +38,9 @@
                 <li><a href="#">Ad Choices</a></li>
                 <li><a href="#">©2020 Name</a></li>
             </ul>
-            <div class="footer__about">
-                <p>Search and compare restaurants, make online reservations, and read restaurant reviews from real diners on KAYAK.</p>
-            </div>
+        </div>
+        <div class="footer__about">
+            <p>Search and compare restaurants, make online reservations, and read restaurant reviews from real diners on KAYAK.</p>
         </div>
     </div>
 </template>
@@ -55,7 +55,7 @@ export default {
 
 .footer {
     background-color: #212A30;
-    padding: 4em 0;
+    padding: 4em 0 2em 0;
 
     &__list {
         display: flex;
@@ -74,6 +74,40 @@ export default {
                 font-size: 12px;
             }
         }
+    }
+
+    &__terms {
+        margin-top: 30px;
+        
+        ul {
+            display: flex;
+            width: 200px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+
+            li {
+            margin-bottom: 5px;
+            margin-right: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &__about {
+        text-align: center;
+        font-size: 11px;
+        width: 250px;
+        margin: 15px auto 0px auto;
+        line-height: 1.5;
+        color: #fff;
+        font-weight: 300;
     }
 
 }

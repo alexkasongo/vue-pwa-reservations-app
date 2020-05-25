@@ -123,6 +123,7 @@ export default {
             height: 46px;
             background-color: #EEEEEE;
             border: 0;
+            border-radius: 8px;
         }
 
         input[type=date] {
@@ -132,6 +133,7 @@ export default {
             height: 46px;
             background-color: #EEEEEE;
             border: 0;
+            border-radius: 8px;
         }
 
         &__button {
@@ -142,6 +144,7 @@ export default {
             background-color: #0081E0;
             border: 0;
             color: #fff;
+            border-radius: 8px;
         }
         
         // reccomendations
