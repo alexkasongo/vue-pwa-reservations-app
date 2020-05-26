@@ -1,6 +1,11 @@
 import Restaurants from '@/components/Restaurants.vue';
 <template>
   <div class="restaurants">
+    <!-- heading -->
+    <div class="restaurants__heading">
+        <h3>Find and book a restaurant.</h3>
+    </div>
+
     <!-- search component -->
     <div class="restaurants__search">
         <div class="restaurants__grid">
@@ -243,9 +248,46 @@ export default {
         width: 90%;
     }
 
+    @media (min-width: 1024px) {
+       width: 70%;
+    }
+
+    &__search {
+        @media (min-width: 1024px) {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    }
+
     &__grid {
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 1024px) {
+           flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    &__address {
+        @media (min-width: 1024px) {
+            width: 70%;
+            margin-right: 5px;
+        }
+    }
+
+    &__heading {
+        display: none;
+        margin: 30px 0;
+
+        h3 {
+            font-size: 34px;
+        }
+
+        @media (min-width: 570px) {
+           display: block;
+        }
     }
     
     @media (min-width: 570px) {
@@ -253,6 +295,10 @@ export default {
         &__grid-middle {
             display: flex;
             justify-content: space-between;
+
+            @media (min-width: 1024px) {
+               margin-right: 5px;
+            }
         }
 
         &__date {

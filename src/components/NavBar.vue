@@ -1,20 +1,22 @@
 <template>
   <div>
       <div class="navbar">
-          <div class="navbar__left">
-            <div class="navbar__logo">
-                <h2>Logo</h2>
+          <div class="navbar__container">
+            <div class="navbar__left">
+                <div class="navbar__logo">
+                    <h2>Logo</h2>
+                </div>
+                <div class="navbar__more">
+                    <h2>More</h2>
+                </div>
             </div>
-            <div class="navbar__more">
-                <h2>More</h2>
-            </div>
-          </div>
-          <div class="navbar__right">
-            <div class="navbar__bookings">
-                <i class="fas fa-suitcase-rolling"></i>
-            </div>
-            <div class="navbar__login">
-                <i class="fas fa-user"></i>
+            <div class="navbar__right">
+                <div class="navbar__bookings">
+                    <i class="fas fa-suitcase-rolling"></i>
+                </div>
+                <div class="navbar__login">
+                    <i class="fas fa-user"></i>
+                </div>
             </div>
           </div>
       </div>
@@ -32,10 +34,28 @@ export default {
         background-color: #1a4f5f;
         height: 62px;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
-        padding: 0 2em;
+        padding: 0 1em;
         color: #fff;
+
+        @media (min-width: 570px) {
+           padding: 0;
+        }
+
+        &__container {
+            display: flex;
+            width: 100%;
+            margin: auto;
+
+            @media (min-width: 570px) {
+               width: 90%;
+            }
+
+            @media (min-width: 1024px) {
+               width: 70%;
+            }
+        }
 
         &__left {
             display: flex;
