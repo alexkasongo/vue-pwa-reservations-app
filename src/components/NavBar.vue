@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
     .navbar {
-        background-color: #FE1253;
+        background-color: #1a4f5f;
         height: 62px;
         display: flex;
         justify-content: space-between;
@@ -50,7 +50,7 @@ export default {
             width: 100%;
             height: 40px;
         }
-        
+
         &__more {
             padding: 0 1em;
         }

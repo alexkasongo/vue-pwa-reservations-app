@@ -40,7 +40,7 @@
             </ul>
         </div>
         <div class="footer__about">
-            <p>Search and compare restaurants, make online reservations, and read restaurant reviews from real diners on KAYAK.</p>
+            <p>Search and compare restaurants, make online reservations, and read restaurant reviews from real diners on NAME.</p>
         </div>
     </div>
 </template>
@@ -86,6 +86,10 @@ export default {
             justify-content: center;
             margin: auto;
 
+            @media (min-width: 570px) {
+               width: unset;
+            }
+
             li {
             margin-bottom: 5px;
             margin-right: 10px;
@@ -108,6 +112,10 @@ export default {
         line-height: 1.5;
         color: #fff;
         font-weight: 300;
+
+        @media (min-width: 570px) {
+            width: unset;
+        }
     }
 
 }
