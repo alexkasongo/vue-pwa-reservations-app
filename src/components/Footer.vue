@@ -60,7 +60,13 @@ export default {
     &__list {
         display: flex;
         justify-content: space-between;
-        margin: 0 2em;
+        width: 90%;
+        margin: auto;
+
+        @media (min-width: 1024px) {
+            width: 70%;
+            margin: auto;
+        }
     }
 
     &__link {
