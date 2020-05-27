@@ -2,10 +2,10 @@
   <div class="fav-carousel">
     <div class="fav-carousel__grid" v-for="data in info" :key="data.id">
         <div class="fav-carousel__container">
-            <div class="fav-carousel__image" :style="{ backgroundImage: `url(${data.url})` }">
+            <div class="fav-carousel__image" :style="{ backgroundImage: `url(${data.src.large})` }">
             </div>
             <div class="fav-carousel__name">
-                <h2 class="fav-carousel__margin">{{data.title}}</h2>
+                <h2 class="fav-carousel__margin">{{data.photographer}}</h2>
                 <div class="fav-carousel__rating">
                     <div class="rating-box">
                         <div class="rating-container">
@@ -38,11 +38,19 @@ export default {
       }
   },
   mounted() {
-    const baseURI = 'https://jsonplaceholder.typicode.com/photos/?_limit=4'
-      this.axios.get(baseURI)
+    // const baseURI = 'https://jsonplaceholder.typicode.com/photos/?_limit=4'
+    //   this.axios.get(baseURI)
+    //   .then((result) => {
+    //     this.info = result.data
+    //   })
+
+    const URL = "https://api.pexels.com/v1/search?query=food&per_page=4"
+    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+    this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
       .then((result) => {
-        this.info = result.data
-      })
+          console.log(`TopCarousel.vue - 42 - variable`, result);
+        this.info = result.data.photos
+    })
   }
 }
 </script>
