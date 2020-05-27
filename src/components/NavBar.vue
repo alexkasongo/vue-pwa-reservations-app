@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss">
     .navbar {
-        background-color: #1a4f5f;
+        background-color: #FFA501;
         height: 62px;
         display: flex;
         // justify-content: space-between;
