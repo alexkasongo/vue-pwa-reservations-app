@@ -1,14 +1,14 @@
 <template>
-  <div class="about">
+  <div class="clubs">
     <NavBar class="navbar-fixed"/>
     <Booking 
-        headline="Search hundreds of hotels at once." 
-        topheadline="Top Kigali destinations" 
+        headline="Search hundreds of night clubs at once." 
+        topheadline="Top Kigali Night Clubs" 
         favheadline="Rwandan favorites in Kigali" 
-        carouselmsg="Explore now. Travel later."
-        searchby="Search hotels by destination"
-        find="Find hotels"
-        bookingmsg="hotels"
+        carouselmsg="Explore now. Party later."
+        searchby="Search Night Clubs by destination"
+        find="Find Night Clubs"
+        bookingmsg="clubs"
     />
     <Footer />
   </div>
@@ -21,7 +21,7 @@ import Footer from '@/components/Footer.vue'
 import Booking from '@/components/Booking.vue'
 
 export default {
-  name: 'Home',
+  name: 'NightClubs',
   components: {
     NavBar,
     Footer,

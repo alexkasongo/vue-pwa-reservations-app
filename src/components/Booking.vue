@@ -223,7 +223,7 @@ export default {
 <style lang="scss">
 .booking {
     width: 300px;
-    margin: 10px auto;
+    margin: 120px auto;
     
     @media (min-width: 570px) {
         width: 90%;
@@ -435,6 +435,7 @@ $font-color: #000;
 
 .option {
   position: relative;
+  z-index: -1;
 
   @media (min-width: 1024px) {
     width: 33%;

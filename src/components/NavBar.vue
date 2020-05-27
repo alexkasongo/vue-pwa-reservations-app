@@ -9,14 +9,33 @@
                 <div class="navbar__more">
                     <router-link to="/"><h2>Restaurants</h2></router-link>
                     <router-link to="/hotels"><h2>Hotels</h2></router-link>
+                    <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
+                    <router-link to="/tourism"><h2>Tourism</h2></router-link>
+                    <router-link to="/transportation"><h2>Transport</h2></router-link>
+                    <router-link to="/security"><h2>Security</h2></router-link>
                 </div>
             </div>
             <div class="navbar__right">
-                <div class="navbar__bookings">
+                <!-- <div class="navbar__bookings">
                     <i class="fas fa-suitcase-rolling"></i>
                 </div>
                 <div class="navbar__login">
                     <i class="fas fa-user"></i>
+                </div> -->
+                <div>
+                    <Slide right noOverlay :closeOnNavigation="true">
+                        <!-- <a id="home" href="#">
+                            <span>Home</span>
+                        </a> -->
+                        <div class="navbar__burger">
+                            <router-link to="/"><h2>Restaurants</h2></router-link>
+                            <router-link to="/hotels"><h2>Hotels</h2></router-link>
+                            <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
+                            <router-link to="/tourism"><h2>Tourism</h2></router-link>
+                            <router-link to="/transportation"><h2>Transport</h2></router-link>
+                            <router-link to="/security"><h2>Security</h2></router-link>
+                        </div>
+                    </Slide>
                 </div>
             </div>
           </div>
@@ -25,8 +44,13 @@
 </template>
 
 <script>
+import { Slide } from 'vue-burger-menu' 
+
 export default {
-    name: 'NavBar'
+    name: 'NavBar',
+    components: {
+        Slide 
+    }
 }
 </script>
 
@@ -67,8 +91,12 @@ export default {
         }
 
         &__more {
-            display: flex;
-            padding: 0 1em;
+            display: none;
+
+            @media (min-width: 1024px) {
+                display: flex;
+                padding: 0 1em; 
+            }
             
             a {
                 text-decoration: none;
@@ -87,7 +115,6 @@ export default {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            width: 100%;
             height: 40px;
         }
 
@@ -98,5 +125,53 @@ export default {
         &--padding {
             padding: 5px;
         }
+
+        &__burger {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 30px;
+                margin-bottom: 50px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .bm-burger-button {
+        right: 10px !important;
+        top: 25px;
+
+        @media (min-width: 1024px) {
+           right: 15px !important;
+        }
+    }
+
+    .line-style {
+        height: 10%;
+    }
+
+    .bm-burger-bars {
+        background-color: #fff;
+    }
+
+    .bm-burger-button {
+        height: 15px;
+        width: 18px;
+    }
+
+    .bm-menu {
+        background-color: #339DBE;
+        height: calc(100% - 62px);
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        position: fixed;
+        top: 62px;
+        transition: .5s;
+        width: 0;
+        z-index: 1000;
     }
 </style>

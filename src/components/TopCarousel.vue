@@ -43,6 +43,12 @@ export default {
 
     @media (min-width: 570px) {
         display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    @media (min-width: 1024px) {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 5px;
     }
@@ -96,6 +102,10 @@ export default {
 
     &__margin {
         height: 52px;
+    }
+
+    &__container {
+        width: 100%;
     }
 }
 </style>

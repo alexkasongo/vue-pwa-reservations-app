@@ -23,6 +23,26 @@ Vue.use(VueRouter)
     name: 'Hotels',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Hotels.vue')
   },
+  {
+    path: '/night-clubs',
+    name: 'NightClubs',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/NightClubs.vue')
+  },
+  {
+    path: '/tourism',
+    name: 'Tourism',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/Tourism.vue')
+  },
+  {
+    path: '/transportation',
+    name: 'Transportation',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/Transportation.vue')
+  },
+  {
+    path: '/security',
+    name: 'Security',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/Security.vue')
+  }
 ]
 
 const router = new VueRouter({
