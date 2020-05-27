@@ -7,12 +7,12 @@
                     <router-link to="/"><h2>Logo</h2></router-link>
                 </div>
                 <div class="navbar__more">
-                    <router-link to="/"><h2>Restaurants</h2></router-link>
-                    <router-link to="/hotels"><h2>Hotels</h2></router-link>
-                    <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
-                    <router-link to="/tourism"><h2>Tourism</h2></router-link>
-                    <router-link to="/transportation"><h2>Transport</h2></router-link>
-                    <router-link to="/security"><h2>Security</h2></router-link>
+                        <router-link to="/"><h2>Restaurants</h2></router-link>
+                        <router-link to="/hotels"><h2>Hotels</h2></router-link>
+                        <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
+                        <router-link to="/tourism"><h2>Tourism</h2></router-link>
+                        <router-link to="/transportation"><h2>Transport</h2></router-link>
+                        <router-link to="/security"><h2>Security</h2></router-link>
                 </div>
             </div>
             <div class="navbar__right">
@@ -50,6 +50,19 @@ export default {
     name: 'NavBar',
     components: {
         Slide 
+    },
+    data() {
+        return {
+            transitionName: null
+        }
+    },
+    // watch the `$route` to determine the transition to use
+    watch: {
+        '$route' (to, from) {
+            const toDepth = to.path.split('/').length
+            const fromDepth = from.path.split('/').length
+            this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+        }
     }
 }
 </script>

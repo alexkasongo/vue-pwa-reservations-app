@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <NavBar class="navbar-fixed"/>
+    <!-- <NavBar class="navbar-fixed"/> -->
     <Booking 
         headline="Search hundreds of hotels at once." 
         topheadline="Top Kigali destinations" 

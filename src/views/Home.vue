@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <NavBar class="navbar-fixed" />
+    <!-- <NavBar class="navbar-fixed" /> -->
     <Booking 
       headline="Find and book a restaurant." 
       topheadline="Top Kigali cuisines" 
@@ -34,11 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.navbar-fixed {
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-</style>

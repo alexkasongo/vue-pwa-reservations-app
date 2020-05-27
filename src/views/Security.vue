@@ -1,6 +1,6 @@
 <template>
   <div class="tourism">
-    <NavBar class="navbar-fixed"/>
+    <!-- <NavBar class="navbar-fixed"/> -->
     <Booking 
         headline="Search hundreds of security services at once." 
         topheadline="Top Kigali security services" 

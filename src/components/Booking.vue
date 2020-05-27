@@ -1,4 +1,3 @@
-import booking from '@/components/booking.vue';
 <template>
   <div class="booking">
     <!-- heading -->
@@ -435,7 +434,7 @@ $font-color: #000;
 
 .option {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
   @media (min-width: 1024px) {
     width: 33%;

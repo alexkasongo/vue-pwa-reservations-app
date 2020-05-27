@@ -1,6 +1,6 @@
 <template>
   <div class="clubs">
-    <NavBar class="navbar-fixed"/>
+    <!-- <NavBar class="navbar-fixed"/> -->
     <Booking 
         headline="Search hundreds of night clubs at once." 
         topheadline="Top Kigali Night Clubs" 
