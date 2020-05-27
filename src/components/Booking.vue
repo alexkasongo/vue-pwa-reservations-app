@@ -1,102 +1,67 @@
-import Restaurants from '@/components/Restaurants.vue';
+import booking from '@/components/booking.vue';
 <template>
-  <div class="restaurants">
+  <div class="booking">
     <!-- heading -->
-    <div class="restaurants__heading">
-        <h3>Find and book a restaurant.</h3>
+    <div class="booking__heading">
+        <h3>{{ headline }}</h3>
+        <!-- <p>{{ info }}</p> -->
     </div>
 
     <!-- search component -->
-    <div class="restaurants__search">
-        <div class="restaurants__grid">
-            <div class="restaurants__address">
+    <div class="booking__search">
+        <div class="booking__grid">
+            <div class="booking__address">
                 <input type="text" placeholder="location">
             </div>
-            <div class="restaurants__grid-middle">
-                <div class="restaurants__date">
+            <div class="booking__grid-middle">
+                <div class="booking__date">
                     <input type="date" name="dateofreservation" id="dateofreservation">
                 </div>
-                <div class="restaurants__guests">
+                <div class="booking__guests">
                     <input type="text" placeholder="2 guests">
                 </div>
-                <div class="restaurants__time">
+                <div class="booking__time">
                     <input type="text" :placeholder="timestamp">
                 </div>
             </div>
             </div>
-        <div class="restaurants__search">
-            <button class="restaurants__button">
+        <div class="booking__search">
+            <button class="booking__button">
                 <i class="fas fa-search"></i>
             </button>
         </div>
     </div>
 
     <!-- recommendations -->
-    <div class="restaurants__reccomendations">
-        <div class="restaurants__rec-title">
-            <h3 class="restaurants__rec-title--left">Rwandan Favorites in Kigali</h3>
-            <h3 class="restaurants__rec-title--right">
-                <a class="restaurants__rec-link" href="#">See all</a>
+    <div class="booking__reccomendations">
+        <div class="booking__rec-title">
+            <h3 class="booking__rec-title--left">{{ topheadline }}</h3>
+            <h3 class="booking__rec-title--right">
+                <a class="booking__rec-link" href="#">See all</a>
             </h3>
-        </div>
-
-        <div class="restaurants__rec-grid">
-            <div class="restaurants__rec-grid-width">
-                <div class="restaurants__rec-image">
-                </div>
-                <div class="restaurants__rec-name">
-                    <h2 class="restaurants__rec-name--margin">Butamu - Kigali</h2>
-                    <div class="restaurants__rating">
-                        <div class="rating-box">
-                            <div class="rating-container">
-                                <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
-                            </div>
-                        </div>
-                        <p>65 reviews</p>
-                    </div>
-                    <p class="restaurants__rec-name--margin">Rwandan franc</p>
-                </div>
-            </div>
-
-            <div class="restaurants__rec-grid-width">
-                <div class="restaurants__rec-image-two">
-                </div>
-                <div class="restaurants__rec-name">
-                    <h2 class="restaurants__rec-name--margin">Butamu - Kigali</h2>
-                    <div class="restaurants__rating">
-                        <div class="rating-box">
-                            <div class="rating-container">
-                                <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
-                                
-                                <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
-                            </div>
-                        </div>
-                        <p>65 reviews</p>
-                    </div>
-                    <p class="restaurants__rec-name--margin">Rwandan franc</p>
-                </div>
-            </div>
         </div>
     </div>
 
+    <!-- carousel -->
+    <TopCarousel :bookingmsg="bookingmsg"/>
+
+    <!-- recommendations -->
+    <div class="booking__reccomendations">
+        <div class="booking__rec-title">
+            <h3 class="booking__rec-title--left">{{ favheadline }}</h3>
+            <h3 class="booking__rec-title--right">
+                <a class="booking__rec-link" href="#">See all</a>
+            </h3>
+        </div>
+    </div>
+    <!-- recommendations & ratings -->
+    <FavCarousel />
+
+
     <!-- search by destination -->
-    <div class="restaurants__destination">
-        <h3>Search restaurants by destination</h3>
-        <p>Find Restaurants</p>
+    <div class="booking__destination">
+        <h3>{{ searchby }}</h3>
+        <p>{{ find }}</p>
     </div>
 
     <!-- locations dropdown -->
@@ -206,19 +171,35 @@ import Restaurants from '@/components/Restaurants.vue';
 </template>
 
 <script>
+import TopCarousel from '@/components/TopCarousel.vue'
+import FavCarousel from '@/components/FavCarousel.vue'
+
 export default {
-    name: 'Restaurants',
+    name: 'booking',
+    props: {
+        headline: String,
+        topheadline: String,
+        favheadline: String,
+        searchby: String,
+        find: String,
+        backgroundUrl: String,
+        bookingmsg: String,
+    },
+    components: {
+        TopCarousel,
+        FavCarousel
+    },
     data() {
         return {
-            value: 'Kigali Restaurants',
+            value: 'Kigali booking',
             list: ["Orange","Apple","Kiwi", "Lemon", "Pineapple"],
             visible: false,
-            timestamp: ""
+            timestamp: "",
         }
     },
     created() {
-            setInterval(this.getNow, 1000);
-        },
+        setInterval(this.getNow, 1000);
+    },
     methods: {
         toggle() {
             this.visible = !this.visible;
@@ -240,7 +221,7 @@ export default {
 </script>
 
 <style lang="scss">
-.restaurants {
+.booking {
     width: 300px;
     margin: 10px auto;
     
@@ -373,19 +354,6 @@ export default {
         color: #339DBE;
     }
 
-
-    &__rec-image {
-        background-image: url("https://images.unsplash.com/photo-1514548383638-cef9251a73ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-        height: 180px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 8px;
-
-        @media (min-width: 570px) {
-            margin-right: 2.5px;
-        }
-    }
 
     &__rec-image-two {
         background-image: url("https://images.unsplash.com/photo-1565349479047-d6211d4efc90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
@@ -532,7 +500,7 @@ $font-color: #000;
 }
 
 // ratings
-.restaurants__rating {
+.booking__rating {
         display: flex;
         margin: 6px 0 0 0;
         align-items: baseline;      

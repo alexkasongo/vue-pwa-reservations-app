@@ -4,10 +4,11 @@
           <div class="navbar__container">
             <div class="navbar__left">
                 <div class="navbar__logo">
-                    <h2>Logo</h2>
+                    <router-link to="/"><h2>Logo</h2></router-link>
                 </div>
                 <div class="navbar__more">
-                    <h2>More</h2>
+                    <router-link to="/"><h2>Restaurants</h2></router-link>
+                    <router-link to="/hotels"><h2>Hotels</h2></router-link>
                 </div>
             </div>
             <div class="navbar__right">
@@ -57,6 +58,25 @@ export default {
             }
         }
 
+        &__logo {
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+        &__more {
+            display: flex;
+            padding: 0 1em;
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+                margin-right: 10px;
+            }
+        }
+
         &__left {
             display: flex;
             align-items: center;
@@ -71,9 +91,6 @@ export default {
             height: 40px;
         }
 
-        &__more {
-            padding: 0 1em;
-        }
         &__bookings {
             padding: 0 1em;
         }
