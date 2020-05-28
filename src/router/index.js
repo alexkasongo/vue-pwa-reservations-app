@@ -47,6 +47,11 @@ Vue.use(VueRouter)
     path: '/restaurants',
     name: 'Restaurants',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurants.vue')
+  },
+  {
+    path: '/deep-search',
+    name: 'DeepSearch',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/DeepSearch.vue')
   }
 ]
 

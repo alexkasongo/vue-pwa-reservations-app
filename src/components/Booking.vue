@@ -7,7 +7,7 @@
     </div>
 
     <!-- search component -->
-    <div class="booking__search">
+    <!-- <div class="booking__search">
         <div class="booking__grid">
             <div class="booking__address">
                 <input type="text" placeholder="location">
@@ -29,14 +29,17 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
-    </div>
+    </div> -->
 
     <!-- recommendations -->
     <div class="booking__reccomendations">
         <div class="booking__rec-title">
             <h3 class="booking__rec-title--left">{{ topheadline }}</h3>
             <h3 class="booking__rec-title--right">
-                <a class="booking__rec-link" href="#">See all</a>
+                <!-- <a class="booking__rec-link" href="#">
+                    See all
+                </a> -->
+                <router-link class="booking__rec-link" to="/deep-search"><h2>See all</h2></router-link>
             </h3>
         </div>
     </div>
@@ -232,13 +235,13 @@ export default {
        width: 80%;
     }
 
-    &__search {
-        @media (min-width: 1024px) {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-        }
-    }
+    // &__search {
+    //     @media (min-width: 1024px) {
+    //         display: flex;
+    //         align-items: baseline;
+    //         justify-content: space-between;
+    //     }
+    // }
 
     &__grid {
         display: flex;
@@ -250,12 +253,12 @@ export default {
         }
     }
 
-    &__address {
-        @media (min-width: 1024px) {
-            width: 80%;
-            margin-right: 5px;
-        }
-    }
+    // &__address {
+    //     @media (min-width: 1024px) {
+    //         width: 80%;
+    //         margin-right: 5px;
+    //     }
+    // }
 
     &__heading {
         display: none;
@@ -272,63 +275,63 @@ export default {
     
     @media (min-width: 570px) {
 
-        &__grid-middle {
-            display: flex;
-            justify-content: space-between;
+        // &__grid-middle {
+        //     display: flex;
+        //     justify-content: space-between;
 
-            @media (min-width: 1024px) {
-               margin-right: 5px;
-            }
-        }
+        //     @media (min-width: 1024px) {
+        //        margin-right: 5px;
+        //     }
+        // }
 
         &__date {
             width: 100%;
             margin: 0px 5px 0px 0px;
         }
-        &__guests {
-            width: 100%;
-            margin: 0px 5px 0px 0px;
-        }
-        &__time {   
-            width: 100%;
-        }
+        // &__guests {
+        //     width: 100%;
+        //     margin: 0px 5px 0px 0px;
+        // }
+        // &__time {   
+        //     width: 100%;
+        // }
     }
 
-    input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin-top: 5px;
-        height: 46px;
-        background-color: #EEEEEE;
-        border: 0;
-        border-radius: 8px;
-    }
+    // input[type=text] {
+    //     width: 100%;
+    //     padding: 12px 20px;
+    //     margin-top: 5px;
+    //     height: 46px;
+    //     background-color: #EEEEEE;
+    //     border: 0;
+    //     border-radius: 8px;
+    // }
 
-    input[type=date] {
-        width: 100%;
-        padding: 12px 20px;
-        margin-top: 5px;
-        height: 46px;
-        background-color: #EEEEEE;
-        border: 0;
-        border-radius: 8px;
-        color: #000;
-    }
+    // input[type=date] {
+    //     width: 100%;
+    //     padding: 12px 20px;
+    //     margin-top: 5px;
+    //     height: 46px;
+    //     background-color: #EEEEEE;
+    //     border: 0;
+    //     border-radius: 8px;
+    //     color: #000;
+    // }
 
-    ::placeholder {
-        color: #212a30;
-    }
+    // ::placeholder {
+    //     color: #212a30;
+    // }
 
-    &__button {
-        width: 100%;
-        padding: 12px 20px;
-        height: 46px;
-        margin-top: 10px;
-        background-color: #339DBE;
-        border: 0;
-        color: #fff;
-        border-radius: 8px;
-    }
+    // &__button {
+    //     width: 100%;
+    //     padding: 12px 20px;
+    //     height: 46px;
+    //     margin-top: 10px;
+    //     background-color: #339DBE;
+    //     border: 0;
+    //     color: #fff;
+    //     border-radius: 8px;
+    // }
     
     // reccomendations
     &__reccomendations {

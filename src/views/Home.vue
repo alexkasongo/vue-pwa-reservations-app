@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home__container"  v-for="data in info" :key="data.id">
       <!-- <div class="home__hero" :style="{ backgroundImage: `url(${data.src.original})` }"> -->
-      <div class="home__hero" :style="{ backgroundImage: `url(https://images.pexels.com/photos/3581751/pexels-photo-3581751.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)` }">
+      <div class="home__hero" :style="{ backgroundImage: `url(https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80)` }">
         <div class="home__titles">
             <!-- <h2>Reservations made easy.</h2> -->
             <!-- <h4>Search hundreds of packages at once</h4> -->
