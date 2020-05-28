@@ -42,6 +42,11 @@ Vue.use(VueRouter)
     path: '/security',
     name: 'Security',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Security.vue')
+  },
+  {
+    path: '/restaurants',
+    name: 'Restaurants',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurants.vue')
   }
 ]
 

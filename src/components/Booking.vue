@@ -229,7 +229,7 @@ export default {
     }
 
     @media (min-width: 1024px) {
-       width: 70%;
+       width: 80%;
     }
 
     &__search {
@@ -252,7 +252,7 @@ export default {
 
     &__address {
         @media (min-width: 1024px) {
-            width: 70%;
+            width: 80%;
             margin-right: 5px;
         }
     }
@@ -316,7 +316,7 @@ export default {
     }
 
     ::placeholder {
-        color: #000;
+        color: #212a30;
     }
 
     &__button {
@@ -340,7 +340,7 @@ export default {
         display: flex;
 
         &--left {
-            width: 70%;
+            width: 80%;
         }
         &--right {
             width: 30%;
@@ -376,7 +376,7 @@ export default {
 
         p {
             font-weight: 300;
-            color: #A1ABB3;
+            color: #212a30;
             font-size: 14px;
             margin-bottom: 20px;    
         }
@@ -417,7 +417,7 @@ export default {
 }
 
 // accordian
-$font-color: #000;
+$font-color: #212a30;
 
 .accordion {
   margin: 0 auto 3em auto;
@@ -478,7 +478,7 @@ $font-color: #000;
             text-decoration: none;
             font-size: 12px;
             font-weight: 300;
-            color: #333;
+            color: #212a30;
         }
     }
   }
@@ -507,7 +507,7 @@ $font-color: #000;
         
         p {
             margin: 0 0 0 10px;
-            color: #A1ABB3;
+            color: #212a30;
             font-size: 14px;
         }
     }

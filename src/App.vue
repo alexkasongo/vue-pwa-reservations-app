@@ -79,6 +79,7 @@ table {
     position: fixed;
     width: 100%;
     top: 0;
+	z-index: 9999;
 }
 
 .fade-enter-active,

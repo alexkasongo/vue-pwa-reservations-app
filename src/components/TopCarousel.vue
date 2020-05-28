@@ -24,21 +24,13 @@ export default {
   data() {
       return {
           info: [],
-          backgroundUrl: "https://source.unsplash.com/user/erondu/1600x900"
       }
   },
   mounted() {
-    // const baseURI = 'https://jsonplaceholder.typicode.com/photos/?_limit=4'
-    //   this.axios.get(baseURI)
-    //   .then((result) => {
-    //     this.info = result.data
-    //   })
-
     const URL = "https://api.pexels.com/v1/search?query=restaurant&per_page=4"
     const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
     this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
       .then((result) => {
-          console.log(`TopCarousel.vue - 41 - variable`, result);
         this.info = result.data.photos
     })
   }
@@ -100,9 +92,13 @@ export default {
             margin: 0px 0px 5px 0px;
         }
 
+        h2 {
+            color: #212a30;
+        }
+
         p {
             font-weight: 300;
-            color: #A1ABB3;
+            color: #212a30;
             font-size: 14px;
             margin-bottom: 5px;    
         }

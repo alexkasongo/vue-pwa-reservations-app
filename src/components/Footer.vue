@@ -64,7 +64,7 @@ export default {
         margin: auto;
 
         @media (min-width: 1024px) {
-            width: 70%;
+            width: 80%;
             margin: auto;
         }
     }

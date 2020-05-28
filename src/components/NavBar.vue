@@ -7,7 +7,7 @@
                     <router-link to="/"><h2>Logo</h2></router-link>
                 </div>
                 <div class="navbar__more">
-                        <router-link to="/"><h2>Restaurants</h2></router-link>
+                        <router-link to="/restaurants"><h2>Restaurants</h2></router-link>
                         <router-link to="/hotels"><h2>Hotels</h2></router-link>
                         <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
                         <router-link to="/tourism"><h2>Tourism</h2></router-link>
@@ -69,7 +69,8 @@ export default {
 
 <style lang="scss">
     .navbar {
-        background-color: #FFA501;
+        background-color: #fafafa;
+        // background-color: #FFA501;
         height: 62px;
         display: flex;
         // justify-content: space-between;
@@ -91,7 +92,7 @@ export default {
             }
 
             @media (min-width: 1024px) {
-               width: 70%;
+               width: 80%;
             }
         }
 
@@ -99,7 +100,7 @@ export default {
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: #000;
             }
         }
 
@@ -113,7 +114,7 @@ export default {
             
             a {
                 text-decoration: none;
-                color: #fff;
+                color: #000;
                 margin-right: 10px;
             }
         }
@@ -167,7 +168,7 @@ export default {
     }
 
     .bm-burger-bars {
-        background-color: #fff;
+        background-color: #000;
     }
 
     .bm-burger-button {

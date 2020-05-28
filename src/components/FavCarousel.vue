@@ -76,7 +76,7 @@ export default {
     }
 
     &__image {
-        height: 180px;
+        height: 300px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -110,9 +110,13 @@ export default {
             margin: 0px 0px 5px 0px;
         }
 
+        h2 {
+            color: #212a30;
+        }
+
         p {
             font-weight: 300;
-            color: #A1ABB3;
+            color: #212a30;
             font-size: 14px;
             margin-bottom: 5px;    
         }
