@@ -28,7 +28,7 @@
         <div class="booking__rec-title">
             <h3 class="booking__rec-title--left">{{ favheadline }}</h3>
             <h3 class="booking__rec-title--right">
-                <a class="booking__rec-link" href="#">See all</a>
+                <router-link class="booking__rec-link" to="/deep-search"><h2>See all</h2></router-link>
             </h3>
         </div>
     </div>

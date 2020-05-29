@@ -24,7 +24,6 @@ export default {
         }
     },
     mounted() {
-        console.log('DeepSearch.vue mounted.');
     },
     computed: {},
     methods: {}

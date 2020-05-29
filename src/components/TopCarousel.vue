@@ -4,8 +4,10 @@ import Restaurants from '@/components/Restaurants.vue';
       <!-- {{info.photos}} -->
     <div class="top-carousel__grid" v-for="data in info" :key="data.id">
         <div class="top-carousel__container">
-            <div class="top-carousel__image" :style="{ backgroundImage: `url(${data.src.large})` }">
-            </div>
+            <router-link :to="`restaurant/${data.photographer}`">
+                <div class="top-carousel__image" :style="{ backgroundImage: `url(${data.src.large})` }">
+                </div>
+            </router-link>
             <div class="top-carousel__name">
                 <h2 class="top-carousel__margin">{{data.photographer}}</h2>
                 <p class="top-carousel__margin">{{data.id}} {{bookingmsg}}</p>

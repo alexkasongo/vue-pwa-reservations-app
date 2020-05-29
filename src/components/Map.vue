@@ -2,52 +2,54 @@
     <div class="map">
         <div class="map__container">
             <!-- search results -->
-            <div class="map__left">
-                <div class="map__searchbox" v-for="data in info" :key="data.id">
-                    <div class="map__searchbox-left">
-                        <div class="map__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
-                        </div>
-                    </div>
-                    <div class="map__searchbox-right">
-                        <div class="map__searchbox-right--pd">
-                            <div class="map__searchbox-title">
-                                <h2>Vic & Anthony's Steakhouse - Las Vegas</h2>
-                                <i class="far fa-heart"></i>
+            <div class="map__left" id="hidingScrollBar">
+                <div class="map__left-content hideScrollBar">
+                    <div class="map__searchbox" v-for="data in info" :key="data.id">
+                        <div class="map__searchbox-left">
+                            <div class="map__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
                             </div>
-                            <div class="map__searchbox-rating">
-                                <div class="rating-box">
-                                    <div class="rating-container">
-                                        <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
-                                        
-                                        <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
-                                        
-                                        <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
-                                        
-                                        <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
-                                        
-                                        <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
+                        </div>
+                        <div class="map__searchbox-right">
+                            <div class="map__searchbox-right--pd">
+                                <div class="map__searchbox-title">
+                                    <h2>Vic & Anthony's Steakhouse - Las Vegas</h2>
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="map__searchbox-rating">
+                                    <div class="rating-box">
+                                        <div class="rating-container">
+                                            <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
+                                            
+                                            <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
+                                            
+                                            <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
+                                            
+                                            <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
+                                            
+                                            <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
+                                        </div>
+                                    </div>
+                                    <p class="map__searchbox-reviews">65 reviews</p>
+                                </div>
+                                <div class="map__searchbox-options">
+                                    <div class="map__searchbox-type">
+                                        <p>Option-1</p>
+                                        <p>Option-2</p>
+                                        <p>Option-3</p>
+                                    </div>
+                                    <div class="map__searchbox-distance">
+                                        <p>20km</p>
                                     </div>
                                 </div>
-                                <p class="map__searchbox-reviews">65 reviews</p>
-                            </div>
-                            <div class="map__searchbox-options">
-                                <div class="map__searchbox-type">
-                                    <p>Option-1</p>
-                                    <p>Option-2</p>
-                                    <p>Option-3</p>
+                                <div class="map__searchbox-place">
+                                    <p>Downtown</p>
                                 </div>
-                                <div class="map__searchbox-distance">
-                                    <p>20km</p>
+                                <div class="map__searchbox-times">
+                                    <p>2pm</p>
+                                    <p>2pm</p>
+                                    <p>2pm</p>
+                                    <p>2pm</p>
                                 </div>
-                            </div>
-                            <div class="map__searchbox-place">
-                                <p>Downtown</p>
-                            </div>
-                            <div class="map__searchbox-times">
-                                <p>2pm</p>
-                                <p>2pm</p>
-                                <p>2pm</p>
-                                <p>2pm</p>
                             </div>
                         </div>
                     </div>
@@ -145,7 +147,6 @@ export default {
     const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
     this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
       .then((result) => {
-          console.log(`TopCarousel.vue - 42 - variable`, result);
         this.info = result.data.photos
     })
   },
@@ -177,7 +178,7 @@ export default {
         &__left {
             width: 55%;
             margin-left: 10%;
-            overflow: auto;
+            // overflow-y: scroll; 
         }
 
         &__right {
@@ -257,6 +258,10 @@ export default {
                 font-weight: 300;
                 font-size: 14px;
             }
+            p:hover {
+                color: #339DBE;
+                text-decoration: underline;
+            }
 
         }
 
@@ -287,8 +292,25 @@ export default {
                 width: 90px;
                 text-align: center;
                 border-radius: 8px;
+                font-weight: 500;
+                font-size: 14px;
+                color: #fff;
             }
         }
+
+        /*------THE TRICK------*/
+        #hidingScrollBar{
+        overflow: hidden;
+        }
+        .hideScrollBar{
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        margin-right: 14px;
+        padding-right: 28px; 
+        padding-bottom: 15px;
+        }
+        /*---------------------*/
 
     }
 </style>

@@ -44,6 +44,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Security.vue')
   },
   {
+    path: '/restaurant/:restId',
+    name: 'Restaurant',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurant.vue')
+  },
+  {
     path: '/restaurants',
     name: 'Restaurants',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurants.vue')
@@ -56,6 +61,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  // mode: 'history',
   routes
 })
 

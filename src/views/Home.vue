@@ -51,7 +51,6 @@ export default {
     const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
     this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
       .then((result) => {
-        console.log(`Home.vue - 33 - variable`, result);
         this.info = result.data.photos
     })
   }
