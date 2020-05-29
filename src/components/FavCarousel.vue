@@ -38,12 +38,6 @@ export default {
       }
   },
   mounted() {
-    // const baseURI = 'https://jsonplaceholder.typicode.com/photos/?_limit=4'
-    //   this.axios.get(baseURI)
-    //   .then((result) => {
-    //     this.info = result.data
-    //   })
-
     const URL = "https://api.pexels.com/v1/search?query=food&per_page=4"
     const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
     this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
@@ -118,7 +112,7 @@ export default {
             font-weight: 300;
             color: #212a30;
             font-size: 14px;
-            margin-bottom: 5px;    
+            margin: 5px 0 5px 0;    
         }
     }
 

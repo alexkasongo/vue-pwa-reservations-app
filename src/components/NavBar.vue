@@ -28,6 +28,7 @@
                             <span>Home</span>
                         </a> -->
                         <div class="navbar__burger">
+                            <router-link to="/"><h2>Home</h2></router-link>
                             <router-link to="/"><h2>Restaurants</h2></router-link>
                             <router-link to="/hotels"><h2>Hotels</h2></router-link>
                             <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>

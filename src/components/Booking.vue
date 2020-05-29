@@ -3,33 +3,9 @@
     <!-- heading -->
     <div class="booking__heading">
         <h3>{{ headline }}</h3>
-        <!-- <p>{{ info }}</p> -->
     </div>
 
-    <!-- search component -->
-    <!-- <div class="booking__search">
-        <div class="booking__grid">
-            <div class="booking__address">
-                <input type="text" placeholder="location">
-            </div>
-            <div class="booking__grid-middle">
-                <div class="booking__date">
-                    <input type="date" name="dateofreservation" id="dateofreservation">
-                </div>
-                <div class="booking__guests">
-                    <input type="text" placeholder="2 guests">
-                </div>
-                <div class="booking__time">
-                    <input type="text" :placeholder="timestamp">
-                </div>
-            </div>
-            </div>
-        <div class="booking__search">
-            <button class="booking__button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-    </div> -->
+    <Search />
 
     <!-- recommendations -->
     <div class="booking__reccomendations">
@@ -175,6 +151,7 @@
 <script>
 import TopCarousel from '@/components/TopCarousel.vue'
 import FavCarousel from '@/components/FavCarousel.vue'
+import Search from '@/components/Search.vue';
 
 export default {
     name: 'booking',
@@ -189,7 +166,8 @@ export default {
     },
     components: {
         TopCarousel,
-        FavCarousel
+        FavCarousel,
+        Search
     },
     data() {
         return {
@@ -520,7 +498,8 @@ $font-color: #212a30;
         direction: rtl !important;
         label {
         display: inline-block;
-        margin: 0 0 8px 0;
+        margin: 0;
+        // margin: 0 0 8px 0;
         color: #d4d4d4;
         cursor: pointer;
         font-size: 12px;

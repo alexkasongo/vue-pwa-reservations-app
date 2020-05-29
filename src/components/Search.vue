@@ -18,9 +18,11 @@
                 </div>
                 </div>
             <div class="search__search">
-                <button class="search__button">
-                    <i class="fas fa-search"></i>
-                </button>
+                <router-link to="/deep-search">
+                    <button class="search__button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </router-link>
             </div>
         </div>
     </div>
@@ -46,16 +48,8 @@ export default {
 <style scoped lang="scss">
 
 .search {
-    margin: 62px auto 0 auto;
 
-    @media (min-width: 570px) {
-        width: 90%;
-    }
-
-    @media (min-width: 1024px) {
-       width: 80%;
-    }
-
+    margin: auto;
 
     &__search {
         @media (min-width: 1024px) {
@@ -142,8 +136,8 @@ export default {
         margin-top: 10px;
         background-color: #339DBE;
         border: 0;
-        color: #fff;
         border-radius: 8px;
+        color: #fff;
     }
 
 }
