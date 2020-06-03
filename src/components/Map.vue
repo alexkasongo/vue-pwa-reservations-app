@@ -200,7 +200,7 @@ export default {
             width: 70%;
             display: flex;
             align-items: center;
-            margin: 0 20px 0 0;
+            margin: 0 0px 0 0;
             cursor: pointer;
             
 
@@ -218,7 +218,7 @@ export default {
 
         &__searchbox-image {
             height: 200px;
-            background-size: cover;
+            // background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 8px;
@@ -298,19 +298,20 @@ export default {
             }
         }
 
-        /*------THE TRICK------*/
-        #hidingScrollBar{
-        overflow: hidden;
-        }
-        .hideScrollBar{
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        margin-right: 14px;
-        padding-right: 28px; 
-        padding-bottom: 15px;
-        }
-        /*---------------------*/
-
     }
+
+/*------THE TRICK------*/
+    #hidingScrollBar{
+    overflow: hidden;
+    }
+    .hideScrollBar{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-right: 14px;
+    padding-right: 28px; 
+    padding-bottom: 15px;
+    }
+    /*---------------------*/
+    
 </style>

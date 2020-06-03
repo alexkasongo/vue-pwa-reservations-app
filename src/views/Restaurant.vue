@@ -5,11 +5,7 @@
             <!-- search results -->
             <div class="rest__left" id="hidingScrollBar">
                 <div class="rest__left-content hideScrollBar">
-                    <div class="rest__searchbox" v-for="data in info" :key="data.id">
-                        <div class="rest__searchbox-left">
-                            <div class="rest__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
-                            </div>
-                        </div>
+                    <div class="rest__searchbox" v-for="data in info.slice(0, 1)" :key="data.id">
                         <div class="rest__searchbox-right">
                             <div class="rest__searchbox-right--pd">
                                 <div class="rest__searchbox-title">
@@ -45,11 +41,119 @@
                                 <div class="rest__searchbox-place">
                                     <p>Downtown</p>
                                 </div>
-                                <div class="rest__searchbox-times">
-                                    <p>2pm</p>
-                                    <p>2pm</p>
-                                    <p>2pm</p>
-                                    <p>2pm</p>
+                            </div>
+                        </div>
+                        <div class="rest__searchbox-left">
+                            <div class="rest__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
+                            </div>
+                        </div>
+
+                        <div class="rest__title">
+                            <h2>About</h2>
+                        </div>
+
+                        <div class="rest__about">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Qui, sint. Facere, saepe eius perspiciatis molestias aliquid 
+                            a consectetur eaque illum velit quisquam ab, quae quam dolorem 
+                            corporis ipsam commodi quis?</p>
+                        </div>
+
+                        <div class="rest__title">
+                            <h2>Reviews and Ratings</h2>
+                        </div>
+
+                        <!-- above recommended -->
+                        <div class="rest__ratings">
+                            <div class="rest__ratings-pd">
+                                <div class="rest__ratings-left">
+                                    <div class="rest__ratings-top">
+                                        <div class="rest__ratings-points">
+                                            <p>4.6</p>
+                                        </div>
+                                        <div class="rest__ratings-points-text">
+                                            <h4>Excellent</h4>
+                                            <p>Based on 200 reviews</p>
+                                        </div>
+                                    </div>
+                                    <div class="rest__ratings-bottom">
+                                        <div class="rest__ratings-graph">
+                                            <i class="far fa-chart-bar"></i>
+                                        </div>
+                                        <div class="rest__ratings-points-text">
+                                            <h4>Noise Level</h4>
+                                            <p>Moderate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rest__ratings-right">
+                                    <div class="rest__ratings-circle">
+                                        <h4>4.6</h4>
+                                        <p>Food</p>
+                                    </div>
+                                    <div class="rest__ratings-circle">
+                                        <h4>4.6</h4>
+                                        <p>Vibe</p>
+                                    </div>
+                                    <div class="rest__ratings-circle">
+                                        <h4>4.6</h4>
+                                        <p>Service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="rest__title">
+                            <h2>Similar Restaurants in Kigali</h2>
+                        </div>
+
+                        <!-- recommended -->
+                        <div class="rest__search">
+                            <div class="rest__search-left">
+                                <div class="rest__search-image" :style="{ backgroundImage: `url(https://images.unsplash.com/photo-1526069631228-723c945bea6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)` }">
+                                </div>
+                            </div>
+                            <div class="rest__search-right">
+                                <div class="rest__search-right--pd">
+                                    <div class="rest__searchbox-title">
+                                        <h2>Vic & Anthony's Steakhouse - Las Vegas</h2>
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="rest__searchbox-rating">
+                                        <div class="rating-box">
+                                            <div class="rating-container">
+                                                <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
+                                                
+                                                <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
+                                                
+                                                <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
+                                                
+                                                <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
+                                                
+                                                <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
+                                            </div>
+                                        </div>
+                                        <p class="rest__searchbox-reviews">65 reviews</p>
+                                    </div>
+                                    <div class="rest__searchbox-options">
+                                        <div class="rest__searchbox-type">
+                                            <p>Option-1</p>
+                                            <p>Option-2</p>
+                                            <p>Option-3</p>
+                                        </div>
+                                        <div class="rest__searchbox-distance">
+                                            <p>20km</p>
+                                        </div>
+                                    </div>
+                                    <div class="rest__searchbox-place">
+                                        <p>Downtown</p>
+                                    </div>
+                                    <div class="rest__searchbox-times">
+                                        <p>2pm</p>
+                                        <p>2pm</p>
+                                        <p>2pm</p>
+                                        <p>2pm</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +288,7 @@ export default {
 
         &__container {
             display: flex;
-            height: 100vh;
+            // height: 100vh;
             width: 80%;
             margin: auto;
         }
@@ -206,37 +310,34 @@ export default {
 
         &__searchbox {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            height: 200px;
+            // height: 200px;
             margin: 0 0 10px 0;
         }
 
         &__searchbox-left {
-            width: 30%;
+            width: 100%;
+            margin-bottom: 50px;
         }
 
         &__searchbox-right {
-            width: 70%;
+            width: 100%;
             display: flex;
             align-items: center;
-            margin: 0 20px 0 0;
+            margin: 5px 0 85px 0;
             cursor: pointer;
             
 
             &--pd {
-                padding: 0 10px 0 15px;
+                // padding: 0 10px 0 15px;
                 width: 100%;
             }
 
         }
-        &__searchbox-right:hover {
-            box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
-            border-radius: 8px;
-            transition: all 0.5s ease;
-        }
 
         &__searchbox-image {
-            height: 200px;
+            height: 360px;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -300,9 +401,160 @@ export default {
             }
         }
 
-        &__searchbox-times {
-            margin: 10px 0 0 0;
+        &__about {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 50px;
+            
+            h2 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 300;    
+                margin-bottom: 50px;
+            }
+        } 
+
+        // ratings
+
+        &__ratings {
+            
+            border-bottom: 1px solid #ccc;
+            margin: 0 0 50px 0;
+        }  
+
+        &__title {
+            h2 {
+                font-size: 20px;
+                margin: 0 0 20px 0;
+            }
+        }
+
+        &__ratings-pd {
             display: flex;
+            margin: 0 0 50px 0;
+        }
+
+        &__ratings-left {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }  
+
+        &__ratings-right {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+
+        &__ratings-top {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }  
+        &__ratings-bottom {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }  
+
+        &__ratings-points {
+
+            p {
+                background-color: #212a30;
+                width: 50px;
+                padding: 15px;
+                color: #fff;
+                font-size: 18px;
+                margin: 0 10px 0 0;
+            }
+        }
+
+        &__ratings-points-text {
+            h4 {
+                font-size: 20px;
+                margin: 0 0 5px 0;
+                font-weight: 300;
+            }
+            p {
+                font-weight: 300;
+            }
+        }
+
+        &__ratings-circle {
+            background-color: orange;
+            width: 80px;
+            padding: 15px;
+            border-radius: 50%;
+            text-align: center;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 10px 0 0;
+            color: #fff;
+
+            h4 {
+                font-size: 20px;
+                margin: 0 0 5px 0;
+                font-weight: 300;
+            }
+            p {
+                font-weight: 300;
+            }
+        }
+
+        &__ratings-graph {
+
+            // background-color: maroon;
+            // width: 50px;
+            padding: 15px;
+            font-size: 30px;
+            color: orange;
+        }
+
+        // recommendations
+
+        &__search {
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        &__search-left {
+            width: 30%;
+        }
+
+        &__search-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &__search-right:hover {
+            box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
+            border-radius: 8px;
+            transition: all 0.5s ease;
+        }
+
+        &__search-right--pd {
+            padding: 0 10px 0 15px;
+            width: 100%;
+        }
+
+        &__search-image {
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+        }
+
+        &__searchbox-times {
+                margin: 10px 0 0 0;
+                display: flex;
 
             p {
                 margin: 0 10px 0 0;
@@ -315,6 +567,7 @@ export default {
                 font-size: 14px;
                 color: #fff;
             }
+
         }
 
         .searchrest {
