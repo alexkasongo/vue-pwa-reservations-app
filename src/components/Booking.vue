@@ -267,63 +267,11 @@ export default {
     
     @media (min-width: 570px) {
 
-        // &__grid-middle {
-        //     display: flex;
-        //     justify-content: space-between;
-
-        //     @media (min-width: 1024px) {
-        //        margin-right: 5px;
-        //     }
-        // }
-
         &__date {
             width: 100%;
             margin: 0px 5px 0px 0px;
         }
-        // &__guests {
-        //     width: 100%;
-        //     margin: 0px 5px 0px 0px;
-        // }
-        // &__time {   
-        //     width: 100%;
-        // }
     }
-
-    // input[type=text] {
-    //     width: 100%;
-    //     padding: 12px 20px;
-    //     margin-top: 5px;
-    //     height: 46px;
-    //     background-color: #EEEEEE;
-    //     border: 0;
-    //     border-radius: 8px;
-    // }
-
-    // input[type=date] {
-    //     width: 100%;
-    //     padding: 12px 20px;
-    //     margin-top: 5px;
-    //     height: 46px;
-    //     background-color: #EEEEEE;
-    //     border: 0;
-    //     border-radius: 8px;
-    //     color: #000;
-    // }
-
-    // ::placeholder {
-    //     color: #212a30;
-    // }
-
-    // &__button {
-    //     width: 100%;
-    //     padding: 12px 20px;
-    //     height: 46px;
-    //     margin-top: 10px;
-    //     background-color: #339DBE;
-    //     border: 0;
-    //     color: #fff;
-    //     border-radius: 8px;
-    // }
     
     // reccomendations
     &__reccomendations {

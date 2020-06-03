@@ -45,6 +45,80 @@
         <MapSingle />
     </div>
 
+
+    <div class="restall__content">
+        
+        <div class="restall__tips">
+            <div class="restall__tips-title">
+                <h3>Tips about restaurants in {{this.$route.params.restId}}</h3>
+            </div>
+            <div class="restall__tips-points">
+                <i class="fas fa-check-circle"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                    alias adipisci asperiores tempore amet, consequatur, 
+                    excepturi ex consectetur aperiam voluptatum fugiat, 
+                    quis nostrum reprehenderit.
+                </p>
+            </div>
+            <div class="restall__tips-points">
+                <i class="fas fa-check-circle"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                    alias adipisci asperiores tempore amet, consequatur, 
+                    excepturi ex consectetur aperiam voluptatum fugiat, 
+                    quis nostrum reprehenderit.
+                </p>
+            </div>
+            <div class="restall__tips-points">
+                <i class="fas fa-check-circle"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                    alias adipisci asperiores tempore amet, consequatur, 
+                    excepturi ex consectetur aperiam voluptatum fugiat, 
+                    quis nostrum reprehenderit.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="restall__content">
+        <div class="accordion">
+            <div class="option">
+                <input type="checkbox" id="toggle1" class="toggle" />
+                <label class="title" for="toggle1">Eastern Province</label>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <router-link :to="`all-restaurants/Bugesera`">Bugesera</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Gatsibo`">Gatsibo</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Kayonza`">Kayonza</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Kirehe`">Kirehe</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Ngoma`">Ngoma</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Nyagatare`">Nyagatare</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Rwamagana`">Rwamagana</router-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
     <Footer />
   </div>
 </template>
@@ -137,6 +211,45 @@ export default {
                 font-size: 12px;
             }
         }
+
+        @media (min-width: 1024px) {
+            h4 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__tips {
+        width: 70%;
+        margin: 0 auto 50px auto;
+    }
+
+    &__tips-title {
+        margin: 0 0 25px 0;
+
+        h3 {
+            font-size: 28px;
+        }
+    }
+
+    &__tips-points {
+        display: flex;
+        margin: 0 0 10px 0;
+
+        svg {
+            color: green;
+            margin: 0 20px 0 0;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            max-width: 650px;
+        }
     }
 
     &__top {
@@ -144,6 +257,10 @@ export default {
     }
 
     &__fav {
+        margin: 0 0 50px 0;
+    }
+
+    &__map {
         margin: 0 0 50px 0;
     }
 }

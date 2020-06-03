@@ -92,12 +92,17 @@ export default {
 
     &__date {
         width: 100%;
-        margin: 0px 5px 0px 0px;
+
+        @media (min-width: 570px) {
+            margin: 0px 5px 0px 0px;
+        }
     }
 
     &__guests {
         width: 100%;
-        margin: 0px 5px 0px 0px;
+        @media (min-width: 570px) {
+            margin: 0px 5px 0px 0px;
+        }
     }
 
     &__time {   
