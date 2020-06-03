@@ -7,34 +7,28 @@
                     <router-link to="/"><h2>Logo</h2></router-link>
                 </div>
                 <div class="navbar__more">
-                        <router-link to="/restaurants"><h2>Restaurants</h2></router-link>
-                        <router-link to="/hotels"><h2>Hotels</h2></router-link>
-                        <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
-                        <router-link to="/tourism"><h2>Tourism</h2></router-link>
-                        <router-link to="/transportation"><h2>Transport</h2></router-link>
-                        <router-link to="/security"><h2>Security</h2></router-link>
+                        <router-link to="/restaurants">Restaurants</router-link>
+                        <router-link to="/hotels">Hotels</router-link>
+                        <router-link to="/night-clubs">Night Clubs</router-link>
+                        <router-link to="/tourism">Tourism</router-link>
+                        <router-link to="/transportation">Transport</router-link>
+                        <router-link to="/security">Security</router-link>
                 </div>
             </div>
             <div class="navbar__right">
-                <!-- <div class="navbar__bookings">
-                    <i class="fas fa-suitcase-rolling"></i>
-                </div>
-                <div class="navbar__login">
-                    <i class="fas fa-user"></i>
-                </div> -->
                 <div>
                     <Slide right noOverlay :closeOnNavigation="true">
                         <!-- <a id="home" href="#">
                             <span>Home</span>
                         </a> -->
                         <div class="navbar__burger">
-                            <router-link to="/"><h2>Home</h2></router-link>
-                            <router-link to="/"><h2>Restaurants</h2></router-link>
-                            <router-link to="/hotels"><h2>Hotels</h2></router-link>
-                            <router-link to="/night-clubs"><h2>Night Clubs</h2></router-link>
-                            <router-link to="/tourism"><h2>Tourism</h2></router-link>
-                            <router-link to="/transportation"><h2>Transport</h2></router-link>
-                            <router-link to="/security"><h2>Security</h2></router-link>
+                            <router-link to="/">Home</router-link>
+                            <router-link to="/">Restaurants</router-link>
+                            <router-link to="/hotels">Hotels</router-link>
+                            <router-link to="/night-clubs">Night Clubs</router-link>
+                            <router-link to="/tourism">Tourism</router-link>
+                            <router-link to="/transportation">Transport</router-link>
+                            <router-link to="/security">Security</router-link>
                         </div>
                     </Slide>
                 </div>
@@ -110,13 +104,14 @@ export default {
 
             @media (min-width: 1024px) {
                 display: flex;
-                padding: 0 1em; 
+                margin: 0 0 0 30px;
+                font-size: 14px;
             }
             
             a {
                 text-decoration: none;
                 color: #000;
-                margin-right: 10px;
+                margin-right: 30px;
             }
         }
 
