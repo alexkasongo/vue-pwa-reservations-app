@@ -51,7 +51,11 @@
                 <label class="title" for="toggle1">Eastern Province</label>
                 <div class="content">
                     <ul>
-                        <li><a href="#">Bugesera</a></li>
+                        <li>
+                            <router-link :to="`all-restaurants/Bugesera`">Bugesera</router-link>
+                            <!-- <router-link :to="`restaurant/${data.photographer}`">Bugesera</router-link> -->
+                            <!-- <a href="#">Bugesera</a> -->
+                        </li>
                         <li><a href="#">Gatsibo</a></li>
                         <li><a href="#">Kayonza</a></li>
                         <li><a href="#">Kirehe</a></li>

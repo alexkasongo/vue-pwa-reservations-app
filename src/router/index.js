@@ -49,6 +49,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurant.vue')
   },
   {
+    path: '/all-restaurants/:restId',
+    name: 'RestaurantsAll',
+    component: () => import(/* webpackChunkName: "hotels" */ '../views/RestaurantsAll.vue')
+  },
+  {
     path: '/restaurants',
     name: 'Restaurants',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/Restaurants.vue')
