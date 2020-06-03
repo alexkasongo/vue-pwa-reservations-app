@@ -204,6 +204,25 @@
                     </l-marker> -->
                     </l-map>
                 </div>
+
+                <div class="rest__locations">
+                    <div class="rest__locations-default">
+                        <h4>Location</h4>
+                        <p><a href="#">201 N 3rd St, Las Vegas, NV 89101</a></p>
+                    </div>
+                    <div class="rest__locations-default">
+                        <h4>Dress Code</h4>
+                        <p>Casual Dress</p>
+                    </div>
+                    <div class="rest__locations-default">
+                        <h4>Phone Number</h4>
+                        <p><a href="#">+1 702 384 2761</a></p>
+                    </div>
+                    <div class="rest__locations-default">
+                        <h4>Website</h4>
+                        <p><a href="#">www.butamu.com</a></p>
+                    </div>
+                </div>
             </div>
         </div>
         <Footer />
@@ -306,6 +325,28 @@ export default {
         &__map {
             height: 300px; 
             width: 100%;
+            margin: 0 0 50px 0;
+        }
+
+        &__locations-default {
+            margin: 0 0 50px 0;
+            
+            h4 {
+                font-size: 20px;
+                font-weight: 300;
+                margin: 0 0 5px 0;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: 300;
+                color: #339DBE;
+            }
+
+            p {
+                margin: 0 0 10px 0;
+                font-weight: 300;
+            }
         }
 
         &__searchbox {
@@ -464,14 +505,18 @@ export default {
         }  
 
         &__ratings-points {
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            margin: 0 10px 0 0;
+            background-color: #212a30;
 
             p {
-                background-color: #212a30;
-                width: 50px;
+                // width: 50px;
                 padding: 15px;
                 color: #fff;
                 font-size: 18px;
-                margin: 0 10px 0 0;
+                // margin: 0 10px 0 0;
             }
         }
 
@@ -511,11 +556,13 @@ export default {
 
         &__ratings-graph {
 
-            // background-color: maroon;
-            // width: 50px;
             padding: 15px;
             font-size: 30px;
             color: orange;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            margin: 0 10px 0 0;
         }
 
         // recommendations
