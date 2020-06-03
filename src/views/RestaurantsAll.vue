@@ -46,73 +46,89 @@
     </div>
 
 
-    <div class="restall__content">
         
-        <div class="restall__tips">
-            <div class="restall__tips-title">
-                <h3>Tips about restaurants in {{this.$route.params.restId}}</h3>
-            </div>
-            <div class="restall__tips-points">
-                <i class="fas fa-check-circle"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
-                    alias adipisci asperiores tempore amet, consequatur, 
-                    excepturi ex consectetur aperiam voluptatum fugiat, 
-                    quis nostrum reprehenderit.
-                </p>
-            </div>
-            <div class="restall__tips-points">
-                <i class="fas fa-check-circle"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
-                    alias adipisci asperiores tempore amet, consequatur, 
-                    excepturi ex consectetur aperiam voluptatum fugiat, 
-                    quis nostrum reprehenderit.
-                </p>
-            </div>
-            <div class="restall__tips-points">
-                <i class="fas fa-check-circle"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Vitae, accusantium non! Aliquid, adipisci non Laudantium 
-                    alias adipisci asperiores tempore amet, consequatur, 
-                    excepturi ex consectetur aperiam voluptatum fugiat, 
-                    quis nostrum reprehenderit.
-                </p>
-            </div>
+    <div class="restall__tips">
+        <div class="restall__tips-title">
+            <h3>Tips about restaurants in {{this.$route.params.restId}}</h3>
         </div>
-
+        <div class="restall__tips-points">
+            <i class="fas fa-check-circle"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                alias adipisci asperiores tempore amet, consequatur, 
+                excepturi ex consectetur aperiam voluptatum fugiat, 
+                quis nostrum reprehenderit.
+            </p>
+        </div>
+        <div class="restall__tips-points">
+            <i class="fas fa-check-circle"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                alias adipisci asperiores tempore amet, consequatur, 
+                excepturi ex consectetur aperiam voluptatum fugiat, 
+                quis nostrum reprehenderit.
+            </p>
+        </div>
+        <div class="restall__tips-points">
+            <i class="fas fa-check-circle"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Vitae, accusantium non! Aliquid, adipisci non Laudantium 
+                alias adipisci asperiores tempore amet, consequatur, 
+                excepturi ex consectetur aperiam voluptatum fugiat, 
+                quis nostrum reprehenderit.
+            </p>
+        </div>
     </div>
 
-    <div class="restall__content">
-        <div class="accordion">
-            <div class="option">
-                <input type="checkbox" id="toggle1" class="toggle" />
-                <label class="title" for="toggle1">Eastern Province</label>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <router-link :to="`all-restaurants/Bugesera`">Bugesera</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Gatsibo`">Gatsibo</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Kayonza`">Kayonza</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Kirehe`">Kirehe</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Ngoma`">Ngoma</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Nyagatare`">Nyagatare</router-link>
-                        </li>
-                        <li>
-                            <router-link :to="`all-restaurants/Rwamagana`">Rwamagana</router-link>
-                        </li>
-                    </ul>
-                </div>
+
+    <div class="accordion-two">
+        <div class="restall__tips-title">
+            <h3>FAQs about restaurants in {{this.$route.params.restId}}</h3>
+        </div>
+
+        <div class="option-two">
+            <input type="checkbox" id="toggle1" class="toggle-two" />
+            <label class="title-two" for="toggle1">What are the trending new restaurants in Fort {{this.$route.params.restId}}</label>
+            <div class="content-two">
+                <ul>
+                    <li>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="option-two">
+            <input type="checkbox" id="toggle2" class="toggle-two" />
+            <label class="title-two" for="toggle2">Where are the most romantic places to eat in {{this.$route.params.restId}}</label>
+            <div class="content-two">
+                <ul>
+                    <li>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="option-two">
+            <input type="checkbox" id="toggle3" class="toggle-two" />
+            <label class="title-two" for="toggle3">Where are the best places to eat in {{this.$route.params.restId}} for families with children?</label>
+            <div class="content-two">
+                <ul>
+                    <li>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Nam natus minima reprehenderit porro, optio ex sint non explicabo
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -262,6 +278,92 @@ export default {
 
     &__map {
         margin: 0 0 50px 0;
+    }
+}
+
+
+// accordian
+$font-color: #212a30;
+
+.accordion-two {
+    width: 70%;
+    margin: 0 auto 3em auto;
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+}
+
+.toggle-two {
+  display: none;
+}
+
+.option-two {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.title-two,
+.content-two {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.title-two {
+  background: #fff;
+  padding: 1em 0em 0em 0em;
+  display: block;
+  color: $font-color;
+}
+.title-two:after, .title-two:before {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 1px;
+  height: 0.75em;
+  background-color: $font-color;
+  transition: all 0.2s;
+}
+.title-two:after {
+  transform: rotate(90deg);
+}
+
+.content-two {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  ul {
+    li {
+        p {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            color: #212a30;
+            line-height: 1.5;
+            padding: 0.5em 0;
+        }
+    }
+  }
+//   p {
+//     margin: 0;
+//     padding: 0.5em 1em 1em;
+//     font-size: 0.9em;
+//     line-height: 1.5;
+//   }
+}
+
+.toggle-two:checked {
+    & + .title-two + .content-two {
+        max-height: 500px;
+    }
+    & + .title-two:before {
+        transform: rotate(90deg) !important;
     }
 }
 </style>

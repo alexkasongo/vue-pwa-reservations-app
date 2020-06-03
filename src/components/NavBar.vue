@@ -70,14 +70,14 @@ export default {
 
 <style lang="scss">
     .navbar {
-        background-color: #339DBE;
+        background-color: #fafafafa;
         // background-color: #FFA501;
         height: 62px;
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         padding: 0 1em;
         color: #fff;
+        box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
 
         @media (min-width: 570px) {
            padding: 0;

@@ -16,14 +16,7 @@
                         <input type="text" placeholder="7:00pm">
                     </div>
                 </div>
-                </div>
-            <!-- <div class="searchrest__search">
-                <router-link to="/deep-search">
-                    <button class="searchrest__button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </router-link>
-            </div> -->
+            </div>
             <div class="searchrest__search">
                 <div class="searchrest__searchbox-times">
                     <p>2pm</p>
