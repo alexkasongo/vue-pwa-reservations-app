@@ -1,11 +1,11 @@
 <template>
   <div class="home">
 
-    <Hero 
+    <!-- <Hero 
       :image="image"
       title=""
       subtitle=""
-    />
+    /> -->
     
     <div class="home__background">
         <Booking 
@@ -58,6 +58,7 @@ export default {
 
     &__background {
         background-color: #fff;
+        margin: 100px 0 0 0;
     }
 
     &__booking {

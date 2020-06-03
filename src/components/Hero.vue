@@ -77,12 +77,12 @@ export default {
         text-align: center;
 
         h2 {
-            color: #DB133C;
+            color: #fff;
             font-size: 36px;
             margin-bottom: 30px;
         }
         h4 {
-            color: #DB133C;
+            color: #fff;
             font-size: 22px;
         }
 

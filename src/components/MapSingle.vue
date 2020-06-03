@@ -82,7 +82,8 @@ export default {
       currentCenter: latLng(47.41322, -1.219482),
       showParagraph: false,
       mapOptions: {
-        zoomSnap: 0.5
+        zoomSnap: 0.5,
+        scrollWheelZoom: false
       },
       showMap: true,
       info: []
@@ -115,11 +116,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .map {
+    .mapsingle {
         &__container {
             display: flex;
-            height: 100vh;
+            height: 490px;
+        }
+
+        &__right {
+            width: 100%;
         }
     }
+
 
 </style>

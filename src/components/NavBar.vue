@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss">
     .navbar {
-        background-color: #fafafa;
+        background-color: #339DBE;
         // background-color: #FFA501;
         height: 62px;
         display: flex;

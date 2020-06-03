@@ -136,7 +136,8 @@ export default {
       currentCenter: latLng(47.41322, -1.219482),
       showParagraph: false,
       mapOptions: {
-        zoomSnap: 0.5
+        zoomSnap: 0.5,
+        scrollWheelZoom: false
       },
       showMap: true,
       info: []

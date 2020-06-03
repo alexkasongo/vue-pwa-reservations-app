@@ -69,7 +69,7 @@ export default {
     }
 
     &__image {
-        height: 300px;
+        height: 200px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

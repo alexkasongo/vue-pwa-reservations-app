@@ -53,15 +53,25 @@
                     <ul>
                         <li>
                             <router-link :to="`all-restaurants/Bugesera`">Bugesera</router-link>
-                            <!-- <router-link :to="`restaurant/${data.photographer}`">Bugesera</router-link> -->
-                            <!-- <a href="#">Bugesera</a> -->
                         </li>
-                        <li><a href="#">Gatsibo</a></li>
-                        <li><a href="#">Kayonza</a></li>
-                        <li><a href="#">Kirehe</a></li>
-                        <li><a href="#">Ngoma</a></li>
-                        <li><a href="#">Nyagatare</a></li>
-                        <li><a href="#">Rwamagana</a></li>
+                        <li>
+                            <router-link :to="`all-restaurants/Gatsibo`">Gatsibo</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Kayonza`">Kayonza</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Kirehe`">Kirehe</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Ngoma`">Ngoma</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Nyagatare`">Nyagatare</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="`all-restaurants/Rwamagana`">Rwamagana</router-link>
+                        </li>
                     </ul>
                 </div>
             </div>

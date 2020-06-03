@@ -67,7 +67,15 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   // mode: 'history',
-  routes
+  routes,
+
+  /**
+   * Vue Router go to top on new page
+   * override the default behaviour of scrolling
+   */
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 })
 
 export default router
