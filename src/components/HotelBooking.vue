@@ -7,16 +7,16 @@
         </div>
         <div class="hotelb">
             <div class="hotelb__left">
-                <div class="hotelb__left-map">map</div>
-                <div class="hotelb__left-price-alert">price alert</div>
-                <div class="hotelb__left-rating">rating</div>
-                <div class="hotelb__left-review">review score</div>
-                <div class="hotelb__left-price">price</div>
-                <div class="hotelb__left-freebies">freebies</div>
-                <div class="hotelb__left-search-name">search by name</div>
-                <div class="hotelb__left-search-chain">search by chain</div>
-                <div class="hotelb__left-search-location">search by location</div>
-                <div class="hotelb__left-search-neighborhoods">search by neighborhoods</div>
+                <div class="hotelb__left-map left-mod-one">map</div>
+                <div class="hotelb__left-price-alert left-mod-one">price alert</div>
+                <div class="hotelb__left-rating left-mod-one">rating</div>
+                <div class="hotelb__left-review left-mod-one">review score</div>
+                <div class="hotelb__left-price left-mod-one">price</div>
+                <div class="hotelb__left-freebies left-mod-one">freebies</div>
+                <div class="hotelb__left-search-name left-mod-one">search by name</div>
+                <div class="hotelb__left-search-chain left-mod-one">search by chain</div>
+                <div class="hotelb__left-search-location left-mod-one">search by location</div>
+                <div class="hotelb__left-search-neighborhoods left-mod-one">search by neighborhoods</div>
             </div>
             <div class="hotelb__middle">
                 <div class="hotelb__middle-announcement">announcement</div>
@@ -75,7 +75,10 @@
                 </div>
                 
             </div>
-            <div class="hotelb__right"></div>
+            <div class="hotelb__right">
+                <div class="hotelb__right-notifications">notifications</div>
+                <div class="hotelb__right-compare">compare</div>
+            </div>
         </div>
     </div>
 
@@ -129,21 +132,18 @@ export default {
     .hotelb {
         display: flex;
         width: 90%;
-        margin: auto;
+        margin: 0 auto 50px auto;
         // height: 100vh;
 
         &__left {
-            background-color: hotpink;
             width: 20%;
             margin: 0 12px 0 0;
         }
         &__middle {
-            background-color: greenyellow;
             width: 60%;
             margin: 0 12px 0 0;
         }
         &__right {
-            background-color: lightseagreen;
             width: 30%;
         }
 
@@ -152,52 +152,42 @@ export default {
         */
         &__left-map {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-price-alert {
             height: 80px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-rating {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-review {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-price {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-freebies {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-search-name {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-search-chain {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-search-location {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         &__left-search-neighborhoods {
             height: 100px;
-            background-color: lightseagreen;
             margin: 0 0 10px 0;
         }
         /*************************************/
@@ -206,14 +196,26 @@ export default {
         * MIDDLE
         */
         &__middle-announcement {
-            height: 100px;
-            background-color: slategrey;
+            height: 70px;
+            background-color: #fafafa;
             margin: 0 0 10px 0;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 8px;
+            padding: 0 10px;
+            align-items: center;
+            box-shadow: 0 0 0 0.5pt #ccc;
         }
         &__middle-signin {
-            height: 50px;
-            background-color: slategrey;
+            height: 40px;
+            background-color: #fafafa;
             margin: 0 0 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            align-items: center;
+            box-shadow: 0 0 0 0.5pt #ccc;
         }
         /*************************************/
 
@@ -232,8 +234,7 @@ export default {
                 // border: 1px solid #000;
             }
             &__searchbox:hover {
-                box-shadow: 0 0 0 0.5pt #000;
-                // outline-offset: 15px;
+                box-shadow: 0 0 0 0.3pt #ccc;
                 transition: all 0.2s ease;
             }
             &__searchbox-left {
@@ -326,6 +327,47 @@ export default {
                     color: #fff;
                 }
             }
+        }
+        /*************************************/
+
+         /**
+        * RIGHT
+        */
+        &__right-notifications {
+            height: 250px;
+            background-color: #fafafa;
+            margin: 0 0 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+            align-items: center;
+            box-shadow: 0 0 0 0.5pt #ccc;
+        }
+        &__right-compare {
+            height: 150px;
+            background-color: #fafafa;
+            margin: 0 0 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+            align-items: center;
+            box-shadow: 0 0 0 0.5pt #ccc;
+        }
+        /*************************************/
+
+        /*
+        * MODIFIERS
+        */
+        .left-mod-one {
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            padding: 0 10px;
+            align-items: center;
+            box-shadow: 0 0 0 0.5pt #ccc;
+            background-color: #fafafa;
         }
         /*************************************/
     }
