@@ -227,14 +227,6 @@ export default {
        width: 80%;
     }
 
-    // &__search {
-    //     @media (min-width: 1024px) {
-    //         display: flex;
-    //         align-items: baseline;
-    //         justify-content: space-between;
-    //     }
-    // }
-
     &__grid {
         display: flex;
         flex-direction: column;
@@ -244,13 +236,6 @@ export default {
             width: 100%;
         }
     }
-
-    // &__address {
-    //     @media (min-width: 1024px) {
-    //         width: 80%;
-    //         margin-right: 5px;
-    //     }
-    // }
 
     &__heading {
         display: none;

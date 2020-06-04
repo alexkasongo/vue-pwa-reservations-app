@@ -4,12 +4,12 @@ import Restaurants from '@/components/Restaurants.vue';
       <!-- {{info.photos}} -->
     <div class="top-carousel__grid" v-for="data in info" :key="data.id">
         <div class="top-carousel__container">
-            <router-link :to="`restaurant/${data.photographer}`">
-                <div class="top-carousel__image" :style="{ backgroundImage: `url(${data.src.large})` }">
+            <router-link :to="`restaurant/${data.title}`">
+                <div class="top-carousel__image" :style="{ backgroundImage: `url(${data.url})` }">
                 </div>
             </router-link>
             <div class="top-carousel__name">
-                <h2 class="top-carousel__margin">{{data.photographer}}</h2>
+                <h2 class="top-carousel__margin">{{data.title}}</h2>
                 <p class="top-carousel__margin">{{data.id}} {{bookingmsg}}</p>
             </div>
         </div>
@@ -29,11 +29,17 @@ export default {
       }
   },
   mounted() {
-    const URL = "https://api.pexels.com/v1/search?query=restaurant&per_page=4"
-    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    // const URL = "https://api.pexels.com/v1/search?query=restaurant&per_page=4"
+    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    //   .then((result) => {
+    //     this.info = result.data.photos
+    // })
+
+    const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+    this.axios.get(URL)
       .then((result) => {
-        this.info = result.data.photos
+        this.info = result.data
     })
   }
 }

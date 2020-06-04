@@ -25,7 +25,7 @@
                 <div class="hotelbcard">
                     <div class="hotelbcard__searchbox" v-for="data in info" :key="data.id">
                         <div class="hotelbcard__searchbox-left">
-                            <div class="hotelbcard__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
+                            <div class="hotelbcard__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
                             </div>
                         </div>
                         <div class="hotelbcard__searchbox-middle">
@@ -106,11 +106,17 @@ export default {
         }
     },
     mounted() {
-        const URL = "https://api.pexels.com/v1/search?query=hotel&per_page=8"
-        const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-        this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+        // const URL = "https://api.pexels.com/v1/search?query=hotel&per_page=8"
+        // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+        // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+        // .then((result) => {
+        //     this.info = result.data.photos
+        // })
+
+        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+        this.axios.get(URL)
         .then((result) => {
-            this.info = result.data.photos
+            this.info = result.data
         })
     },
     computed: {},
@@ -414,8 +420,9 @@ export default {
             padding: 0 10px;
             align-items: center;
             box-shadow: 0 0 0 0.5pt #ccc;
-            background-color: #339DBE;
-            color: #fff;
+            background-color: #EEEEEE;
+            color: #000;
+            font-weight: 300;
         }
         /*************************************/
     }

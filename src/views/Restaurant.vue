@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="rest__searchbox-left">
-                            <div class="rest__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
+                            <div class="rest__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
                             </div>
                         </div>
 
@@ -110,7 +110,7 @@
                         <!-- recommended -->
                         <div class="rest__search">
                             <div class="rest__search-left">
-                                <div class="rest__search-image" :style="{ backgroundImage: `url(https://images.unsplash.com/photo-1526069631228-723c945bea6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)` }">
+                                <div class="rest__search-image" :style="{ backgroundImage: `url(https://via.placeholder.com/300.png/09f/fff)` }">
                                 </div>
                             </div>
                             <div class="rest__search-right">
@@ -247,11 +247,17 @@ export default {
         }
     },
     mounted() {
-    const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
-    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-        this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+        // const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
+        // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+        // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+        // .then((result) => {
+        //     this.info = result.data.photos
+        // })
+
+        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+        this.axios.get(URL)
         .then((result) => {
-            this.info = result.data.photos
+            this.info = result.data
         })
     },
     computed: {},

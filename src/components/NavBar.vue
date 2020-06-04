@@ -4,15 +4,38 @@
           <div class="navbar__container">
             <div class="navbar__left">
                 <div class="navbar__logo">
-                    <router-link to="/"><h2>Logo</h2></router-link>
+                    <router-link to="/"><h2 v-if="routeName === 'Home'" class="navbar__logo-active">Logo</h2></router-link>
+                    <router-link to="/"><h2 v-if="routeName !== 'Home'" class="navbar__logo-not-active">Logo</h2></router-link>
                 </div>
                 <div class="navbar__more">
+                    <div class="navbar__highlight">
                         <router-link to="/restaurants">Restaurants</router-link>
+                        <div v-if="routeName === 'Restaurants'" class="navbar__highlight-color"></div>
+                        <div v-if="routeName === 'RestaurantsAll'" class="navbar__highlight-color"></div>
+                        <div v-if="routeName === 'Restaurant'" class="navbar__highlight-color"></div>
+                        <!-- below code keeps navigations in vertical center -->
+                        <!-- <div class="navbar__highlight-placeholder"></div> -->
+                    </div>
+                    <div class="navbar__highlight">
                         <router-link to="/hotels">Hotels</router-link>
+                        <div v-if="routeName === 'Hotels'" class="navbar__highlight-color"></div>
+                    </div>
+                    <div class="navbar__highlight">
                         <router-link to="/night-clubs">Night Clubs</router-link>
+                        <div v-if="routeName === 'NightClubs'" class="navbar__highlight-color"></div>
+                    </div>
+                    <div class="navbar__highlight">
                         <router-link to="/tourism">Tourism</router-link>
+                        <div v-if="routeName === 'Tourism'" class="navbar__highlight-color"></div>
+                    </div>
+                    <div class="navbar__highlight">
                         <router-link to="/transportation">Transport</router-link>
+                        <div v-if="routeName === 'Transportation'" class="navbar__highlight-color"></div>
+                    </div>
+                    <div class="navbar__highlight">
                         <router-link to="/security">Security</router-link>
+                        <div v-if="routeName === 'Security'" class="navbar__highlight-color"></div>
+                    </div>
                 </div>
             </div>
             <div class="navbar__right">
@@ -48,7 +71,8 @@ export default {
     },
     data() {
         return {
-            transitionName: null
+            transitionName: null,
+            routeName: null
         }
     },
     // watch the `$route` to determine the transition to use
@@ -57,6 +81,8 @@ export default {
             const toDepth = to.path.split('/').length
             const fromDepth = from.path.split('/').length
             this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+            this.routeName = to.name
+            console.log(`NavBar.vue - 61 - variable`, );
         }
     }
 }
@@ -95,8 +121,16 @@ export default {
 
             a {
                 text-decoration: none;
-                color: #000;
+                color: crimson;
+                font-weight: 600;
             }
+        }
+
+        &__logo-active {
+            color: crimson;
+        }
+        &__logo-not-active {
+            color: #000;
         }
 
         &__more {
@@ -106,12 +140,14 @@ export default {
                 display: flex;
                 margin: 0 0 0 30px;
                 font-size: 14px;
+                font-weight: 600;
+                height: 30px;
+                align-items: center;
             }
             
             a {
                 text-decoration: none;
                 color: #000;
-                margin-right: 30px;
             }
         }
 
@@ -147,6 +183,21 @@ export default {
                 margin-bottom: 50px;
                 font-weight: 300;
             }
+        }
+
+        &__highlight {
+            margin: 0 30px 0 0;
+            // height: 25px;
+        }
+
+        &__highlight-color {
+            height: 2px;
+            background: crimson;
+            // transition: all 0.5s ease;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
         }
     }
 
@@ -184,4 +235,41 @@ export default {
         width: 0;
         z-index: 1000;
     }
+
+/*
+* FADE IN ANIMATION
+*/
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*********************************/
 </style>

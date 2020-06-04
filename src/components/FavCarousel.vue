@@ -2,10 +2,10 @@
   <div class="fav-carousel">
     <div class="fav-carousel__grid" v-for="data in info" :key="data.id">
         <div class="fav-carousel__container">
-            <div class="fav-carousel__image" :style="{ backgroundImage: `url(${data.src.large})` }">
+            <div class="fav-carousel__image" :style="{ backgroundImage: `url(${data.url})` }">
             </div>
             <div class="fav-carousel__name">
-                <h2 class="fav-carousel__margin">{{data.photographer}}</h2>
+                <h2 class="fav-carousel__margin">{{data.title}}</h2>
                 <div class="fav-carousel__rating">
                     <div class="rating-box">
                         <div class="rating-container">
@@ -38,11 +38,17 @@ export default {
       }
   },
   mounted() {
-    const URL = "https://api.pexels.com/v1/search?query=food&per_page=4"
-    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    // const URL = "https://api.pexels.com/v1/search?query=food&per_page=4"
+    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    //   .then((result) => {
+    //     this.info = result.data.photos
+    // })
+
+    const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+    this.axios.get(URL)
       .then((result) => {
-        this.info = result.data.photos
+        this.info = result.data
     })
   }
 }

@@ -6,7 +6,7 @@
                 <div class="map__left-content hideScrollBar">
                     <div class="map__searchbox" v-for="data in info" :key="data.id">
                         <div class="map__searchbox-left">
-                            <div class="map__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
+                            <div class="map__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
                             </div>
                         </div>
                         <div class="map__searchbox-right">
@@ -144,11 +144,17 @@ export default {
     };
   },
   mounted() {
-    const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
-    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    // const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
+    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    //   .then((result) => {
+    //     this.info = result.data.photos
+    // })
+
+    const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=8"
+    this.axios.get(URL)
       .then((result) => {
-        this.info = result.data.photos
+        this.info = result.data
     })
   },
   methods: {

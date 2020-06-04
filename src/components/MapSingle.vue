@@ -90,12 +90,12 @@ export default {
     };
   },
   mounted() {
-    const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
-    const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
-      .then((result) => {
-        this.info = result.data.photos
-    })
+    // const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
+    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
+    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
+    //   .then((result) => {
+    //     this.info = result.data.photos
+    // })
   },
   methods: {
     zoomUpdate(zoom) {
