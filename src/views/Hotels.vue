@@ -1,15 +1,8 @@
 <template>
-  <div class="about">
-    <!-- <NavBar class="navbar-fixed"/> -->
-    <Booking 
-        headline="Search hundreds of hotels at once." 
-        topheadline="Top Kigali destinations" 
-        favheadline="Rwandan favorites in Kigali" 
-        carouselmsg="Explore now. Travel later."
-        searchby="Search hotels by destination"
-        find="Find hotels"
-        bookingmsg="hotels"
-    />
+  <div class="hotels">
+    <div class="hotels">
+      <HotelBooking />
+    </div>
     <Footer />
   </div>
 </template>
@@ -18,14 +11,20 @@
 // @ is an alias to /src
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
-import Booking from '@/components/Booking.vue'
+import HotelBooking from '@/components/HotelBooking.vue'
 
 export default {
-  name: 'Home',
+  name: 'Hotels',
   components: {
     NavBar,
-    Footer,
-    Booking
+    HotelBooking,
+    Footer
   }
 }
 </script>
+
+<style lang="scss">
+  .hotels {
+    margin: 62px 0 0 0;
+  }
+</style>

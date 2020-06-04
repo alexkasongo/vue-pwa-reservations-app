@@ -219,7 +219,6 @@ export default {
 
         &__searchbox-image {
             height: 200px;
-            // background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 8px;
@@ -227,7 +226,6 @@ export default {
 
 
         &__searchbox-title {
-            // margin: 15px 0 0 0;
             font-size: 20px;
             display: flex;
             justify-content: space-between;
