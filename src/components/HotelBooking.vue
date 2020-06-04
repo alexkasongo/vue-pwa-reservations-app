@@ -28,11 +28,10 @@
                             <div class="hotelbcard__searchbox-image" :style="{ backgroundImage: `url(${data.src.large})` }">
                             </div>
                         </div>
-                        <div class="hotelbcard__searchbox-right">
-                            <div class="hotelbcard__searchbox-right--pd">
+                        <div class="hotelbcard__searchbox-middle">
+                            <div class="hotelbcard__searchbox-middle--pd">
                                 <div class="hotelbcard__searchbox-title">
-                                    <h2>Vic & Anthony's Steakhouse - Las Vegas</h2>
-                                    <i class="far fa-heart"></i>
+                                    <h2>Conrad Fort Lauderdale Beach</h2>
                                 </div>
                                 <div class="hotelbcard__searchbox-rating">
                                     <div class="rating-box">
@@ -48,7 +47,7 @@
                                             <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
                                         </div>
                                     </div>
-                                    <p class="hotelbcard__searchbox-reviews">65 reviews</p>
+                                    <!-- <p class="hotelbcard__searchbox-reviews">65 reviews</p> -->
                                 </div>
                                 <div class="hotelbcard__searchbox-options">
                                     <div class="hotelbcard__searchbox-type">
@@ -56,18 +55,26 @@
                                         <p>Option-2</p>
                                         <p>Option-3</p>
                                     </div>
-                                    <div class="hotelbcard__searchbox-distance">
-                                        <p>20km</p>
-                                    </div>
                                 </div>
                                 <div class="hotelbcard__searchbox-place">
                                     <p>Downtown</p>
                                 </div>
                                 <div class="hotelbcard__searchbox-times">
-                                    <p>2pm</p>
-                                    <p>2pm</p>
-                                    <p>2pm</p>
-                                    <p>2pm</p>
+                                    <div class="hotelbcard__searchbox-deal hotelbcard__searchbox-mod">
+                                        <p>Private Deal</p>
+                                        <p>$200</p>
+                                    </div>
+                                    <div class="hotelbcard__searchbox-signin hotelbcard__searchbox-mod">
+                                        <p>Sign in to</p>
+                                        <p>unlock</p>
+                                    </div>
+                                    <div class="hotelbcard__searchbox-more hotelbcard__searchbox-mod">
+                                        <p>More Sites</p>
+                                        <p>$200</p>
+                                    </div>
+                                    <div class="hotelbcard__searchbox-price hotelbcard__searchbox-mod">
+                                        <p>View Deal</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -140,11 +147,11 @@ export default {
             margin: 0 12px 0 0;
         }
         &__middle {
-            width: 60%;
+            width: 65%;
             margin: 0 12px 0 0;
         }
         &__right {
-            width: 30%;
+            width: 25%;
         }
 
         /**
@@ -248,7 +255,7 @@ export default {
                 border-top-left-radius: 8px;
                 border-bottom-left-radius: 8px;
             }
-            &__searchbox-right {
+            &__searchbox-middle {
                 width: 70%;
                 display: flex;
                 align-items: center;
@@ -270,7 +277,7 @@ export default {
             &__searchbox-rating {
                 display: flex;
                 align-items: center;
-                margin: 10px 0 0 0;
+                margin: 20px 0 0 0;
             }
             &__searchbox-reviews {
                 margin: 0 0 0 10px;
@@ -303,29 +310,69 @@ export default {
 
             }
             &__searchbox-place {
-            margin: 10px 0 0 0;
-
-            p {
-                font-weight: 300;;
-                font-size: 14px;
-            }
-        }
-
-            &__searchbox-times {
                 margin: 10px 0 0 0;
-                display: flex;
 
                 p {
-                    margin: 0 10px 0 0;
-                    background-color: orange;
-                    padding: 8px;
-                    width: 90px;
-                    text-align: center;
-                    border-radius: 8px;
-                    font-weight: 500;
+                    font-weight: 300;;
                     font-size: 14px;
-                    color: #fff;
                 }
+            }
+            &__searchbox-times {
+                margin: 20px 0 0 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            &__searchbox-mod {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: max-content;
+                height: 40px;
+            }
+            &__searchbox-deal    {
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                p:first-child {
+                    color: #339DBE;
+                    margin: 0 0 5px 0;
+                }
+            }
+            &__searchbox-signin {
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                padding: 5px 25px;
+                p {
+                    font-size: 10px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                p:first-child {
+                    margin: 0 0 5px 0;
+                }
+            }
+            &__searchbox-more {
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                p:first-child {
+                    margin: 0 0 5px 0;
+                }
+                p:nth-child(2) {
+                    color: green;
+                }
+            }
+            &__searchbox-price {
+                background-color: orange;
+                width: max-content;
+                padding: 10px 25px;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 300;
             }
         }
         /*************************************/
@@ -367,7 +414,8 @@ export default {
             padding: 0 10px;
             align-items: center;
             box-shadow: 0 0 0 0.5pt #ccc;
-            background-color: #fafafa;
+            background-color: #339DBE;
+            color: #fff;
         }
         /*************************************/
     }
