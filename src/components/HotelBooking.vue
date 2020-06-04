@@ -113,7 +113,7 @@ export default {
         //     this.info = result.data.photos
         // })
 
-        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=8"
         this.axios.get(URL)
         .then((result) => {
             this.info = result.data

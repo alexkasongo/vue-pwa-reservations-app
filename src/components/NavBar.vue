@@ -121,13 +121,13 @@ export default {
 
             a {
                 text-decoration: none;
-                color: crimson;
+                color: orange;
                 font-weight: 600;
             }
         }
 
         &__logo-active {
-            color: crimson;
+            color: orange;
         }
         &__logo-not-active {
             color: #000;
@@ -192,7 +192,7 @@ export default {
 
         &__highlight-color {
             height: 2px;
-            background: crimson;
+            background: orange;
             // transition: all 0.5s ease;
             animation: fadein 2s;
             -moz-animation: fadein 2s; /* Firefox */
