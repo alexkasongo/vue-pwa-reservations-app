@@ -120,6 +120,7 @@ export default {
         &__container {
             display: flex;
             height: 490px;
+            // height: 100vh;
         }
 
         &__right {

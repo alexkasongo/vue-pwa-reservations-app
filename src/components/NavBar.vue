@@ -9,28 +9,26 @@
                 </div>
                 <div class="navbar__more">
                     <div class="navbar__highlight">
-                        <router-link to="/restaurants">Restaurants</router-link>
-                        <div v-if="routeName === 'Restaurants'" class="navbar__highlight-color"></div>
-                        <div v-if="routeName === 'RestaurantsAll'" class="navbar__highlight-color"></div>
-                        <div v-if="routeName === 'Restaurant'" class="navbar__highlight-color"></div>
-                        <!-- below code keeps navigations in vertical center -->
-                        <!-- <div class="navbar__highlight-placeholder"></div> -->
-                    </div>
-                    <div class="navbar__highlight">
                         <router-link to="/hotels">Hotels</router-link>
                         <div v-if="routeName === 'Hotels'" class="navbar__highlight-color"></div>
+                    </div>
+                    <div class="navbar__highlight">
+                        <router-link to="/transportation">Transport</router-link>
+                        <div v-if="routeName === 'Transportation'" class="navbar__highlight-color"></div>
                     </div>
                     <div class="navbar__highlight">
                         <router-link to="/night-clubs">Night Clubs</router-link>
                         <div v-if="routeName === 'NightClubs'" class="navbar__highlight-color"></div>
                     </div>
                     <div class="navbar__highlight">
-                        <router-link to="/tourism">Tourism</router-link>
-                        <div v-if="routeName === 'Tourism'" class="navbar__highlight-color"></div>
+                        <router-link to="/restaurants">Restaurants</router-link>
+                        <div v-if="routeName === 'Restaurants'" class="navbar__highlight-color"></div>
+                        <div v-if="routeName === 'RestaurantsAll'" class="navbar__highlight-color"></div>
+                        <div v-if="routeName === 'Restaurant'" class="navbar__highlight-color"></div>
                     </div>
                     <div class="navbar__highlight">
-                        <router-link to="/transportation">Transport</router-link>
-                        <div v-if="routeName === 'Transportation'" class="navbar__highlight-color"></div>
+                        <router-link to="/tourism">Tourism</router-link>
+                        <div v-if="routeName === 'Tourism'" class="navbar__highlight-color"></div>
                     </div>
                     <div class="navbar__highlight">
                         <router-link to="/security">Security</router-link>
@@ -48,9 +46,9 @@
                             <router-link to="/">Home</router-link>
                             <router-link to="/restaurants">Restaurants</router-link>
                             <router-link to="/hotels">Hotels</router-link>
+                            <router-link to="/transportation">Transport</router-link>
                             <router-link to="/night-clubs">Night Clubs</router-link>
                             <router-link to="/tourism">Tourism</router-link>
-                            <router-link to="/transportation">Transport</router-link>
                             <router-link to="/security">Security</router-link>
                         </div>
                     </Slide>
