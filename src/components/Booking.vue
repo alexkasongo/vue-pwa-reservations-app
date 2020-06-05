@@ -348,7 +348,6 @@ export default {
 $font-color: #212a30;
 
 .accordion {
-  margin: 0 auto 3em auto;
     @media (min-width: 1024px) {
         display: flex;
         flex-wrap: wrap;

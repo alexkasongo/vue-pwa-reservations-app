@@ -46,7 +46,7 @@
                         </a> -->
                         <div class="navbar__burger">
                             <router-link to="/">Home</router-link>
-                            <router-link to="/">Restaurants</router-link>
+                            <router-link to="/restaurants">Restaurants</router-link>
                             <router-link to="/hotels">Hotels</router-link>
                             <router-link to="/night-clubs">Night Clubs</router-link>
                             <router-link to="/tourism">Tourism</router-link>

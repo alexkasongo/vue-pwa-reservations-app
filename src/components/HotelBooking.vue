@@ -8,15 +8,121 @@
         <div class="hotelb">
             <div class="hotelb__left">
                 <div class="hotelb__left-map left-mod-one">map</div>
-                <div class="hotelb__left-price-alert left-mod-one">price alert</div>
-                <div class="hotelb__left-rating left-mod-one">rating</div>
-                <div class="hotelb__left-review left-mod-one">review score</div>
-                <div class="hotelb__left-price left-mod-one">price</div>
-                <div class="hotelb__left-freebies left-mod-one">freebies</div>
-                <div class="hotelb__left-search-name left-mod-one">search by name</div>
-                <div class="hotelb__left-search-chain left-mod-one">search by chain</div>
-                <div class="hotelb__left-search-location left-mod-one">search by location</div>
-                <div class="hotelb__left-search-neighborhoods left-mod-one">search by neighborhoods</div>
+                <div class="hotelb__left-price-alert left-mod-one">
+                    <div class="hotelb__left-alert-top">
+                        <div class="hotelb__left-aler-bell">
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <h4>Price Alert</h4>
+                    </div>
+                    <div class="hotelb__left-alert-btm">
+                        <h4>Track prices</h4>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="hotelb__left-rating left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle1" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle1">Stars</label>
+                            <div class="accordian-content">
+                                <div class="big-rating-box">
+                                    <div class="big-rating-container">
+                                        <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
+                                        
+                                        <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
+                                        
+                                        <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
+                                        
+                                        <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
+                                        
+                                        <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-review left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle2" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle2">Stars</label>
+                            <div class="accordian-content">
+                                <h1>review score</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-price left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle3" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle3">Stars</label>
+                            <div class="accordian-content">
+                                <h1>price</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-freebies left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle4" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle4">Stars</label>
+                            <div class="accordian-content">
+                                <h1>freebies</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-search-name left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle5" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle5">Stars</label>
+                            <div class="accordian-content">
+                                <h1>search by name</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-search-chain left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle6" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle6">Stars</label>
+                            <div class="accordian-content">
+                                <h1>search by chain</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-search-location left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle7" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle7">Stars</label>
+                            <div class="accordian-content">
+                                <h1>search by location</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelb__left-search-neighborhoods left-mod-one">
+                    <div class="accordion">
+                        <div class="accordian-option">
+                            <input type="checkbox" id="toggle8" class="accordian-toggle" checked/>
+                            <label class="accordian-title" for="toggle8">Stars</label>
+                            <div class="accordian-content">
+                                <h1>search by neighborhoods</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="hotelb__middle">
                 <div class="hotelb__middle-announcement">announcement</div>
@@ -168,11 +274,12 @@ export default {
             margin: 0 0 10px 0;
         }
         &__left-price-alert {
-            height: 80px;
             margin: 0 0 10px 0;
+            padding: 0 0 10px 0;
+            // display: flex;
+            // flex-direction: column;
         }
         &__left-rating {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-review {
@@ -202,6 +309,22 @@ export default {
         &__left-search-neighborhoods {
             height: 100px;
             margin: 0 0 10px 0;
+        }
+        /*
+        * PRICE ALERT
+        */
+        &__left-alert-top {
+            display: flex;
+            h4 {
+                font-weight: 400;
+            }
+        }
+        &__left-alert-btm {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__left-aler-bell {
+            margin: 0 10px 20px 0;
         }
         /*************************************/
 
@@ -414,12 +537,10 @@ export default {
         * MODIFIERS
         */
         .left-mod-one {
-            display: flex;
-            justify-content: center;
-            border-radius: 8px;
-            padding: 0 10px;
+            // border-radius: 8px;
+            // padding: 0 10px 0 0;
             align-items: center;
-            box-shadow: 0 0 0 0.5pt #ccc;
+            // box-shadow: 0 0 0 0.5pt #ccc;
             background-color: #EEEEEE;
             color: #000;
             font-weight: 300;
@@ -427,4 +548,176 @@ export default {
         /*************************************/
     }
 
+/*
+* SLIDER ON/OFF
+*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/*****************************************/
+
+/*
+* TOGGLE 
+*/
+.accordion {
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.accordian-toggle {
+  display: none;
+}
+
+.accordian-option {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.accordian-title,
+.accordian-content {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.accordian-title {
+//   background: #fff;
+  padding: 1em 0em 0em 0em;
+  display: block;
+  color: red;
+}
+.accordian-title:after, .accordian-title:before {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 1px;
+  height: 0.75em;
+  background-color: red;
+  transition: all 0.2s;
+}
+.accordian-title:after {
+  transform: rotate(90deg);
+}
+
+.accordian-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  ul {
+    li {
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            color: #212a30;
+        }
+    }
+  }
+  p {
+    margin: 0;
+    padding: 0.5em 1em 1em;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+}
+
+.accordian-toggle:checked {
+    & + .accordian-title + .accordian-content {
+        max-height: 500px;
+    }
+    & + .accordian-title:before {
+        transform: rotate(90deg) !important;
+    }
+}
+/*****************************************/
+
+
+/*
+* BIG RATING
+*/
+.big-rating-box {
+    display: inline-block;
+    .big-rating-container {
+        direction: rtl !important;
+        label {
+        display: inline-block;
+        margin: 30px 8px 0 0;
+        color: #d4d4d4;
+        padding: 0 0 10px 0;
+        cursor: pointer;
+        font-size: 34px;
+        transition: color 0.2s;
+        }
+        input {
+        display: none;
+        }
+        label:hover, label:hover ~ label, input:checked ~ label  {
+        color: #E59825;
+        }
+    }
+}
+/*****************************************/
 </style>

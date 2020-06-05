@@ -3,7 +3,7 @@
 
     <Hero 
       :image="image"
-      title="Eastern Province"
+      title=""
       subtitle=""
     />
 
@@ -163,7 +163,7 @@ export default {
   data() {
       return {
           info: [],
-          image: "https://images.unsplash.com/photo-1565349479047-d6211d4efc90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          image: "https://via.placeholder.com/2000.png/"
       }
   }
 }
