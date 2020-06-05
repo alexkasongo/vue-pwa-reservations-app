@@ -1,12 +1,5 @@
 <template>
   <div class="home">
-
-    <!-- <Hero 
-      :image="image"
-      title=""
-      subtitle=""
-    /> -->
-    
     <div class="home__background">
         <Booking 
             class="home__booking"
@@ -19,26 +12,19 @@
             bookingmsg="restaurants"
         />
     </div>
-    
-
     <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import NavBar from '@/components/NavBar.vue'
 import Booking from '@/components/Booking.vue'
 import Footer from '@/components/Footer.vue'
 import Hero from '@/components/Hero.vue'
 
 export default {
   name: 'Home',
-  // props: [
-  //   title
-  // ],
   components: {
-    NavBar,
     Booking,
     Footer,
     Hero

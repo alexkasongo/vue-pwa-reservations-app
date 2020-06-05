@@ -9,14 +9,12 @@
 
 <script>
 // @ is an alias to /src
-import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
 import HotelBooking from '@/components/HotelBooking.vue'
 
 export default {
   name: 'Hotels',
   components: {
-    NavBar,
     HotelBooking,
     Footer
   }

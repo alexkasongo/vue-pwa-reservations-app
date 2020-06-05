@@ -1,12 +1,19 @@
 <template>
   <div>
       <div class="navbar">
-          <div class="navbar__container">
+          <div class="navbar__container" 
+            :style= "[
+                    routeName === 'Hotels' ? styleA : 
+                    routeName === 'Transportation' ? styleB : 
+                    routeName === 'Transportation' ? styleC : styleD
+                ]"
+            >
             <div class="navbar__left">
                 <div class="navbar__logo">
                     <router-link to="/"><h2 v-if="routeName === 'Home'" class="navbar__logo-active">Logo</h2></router-link>
                     <router-link to="/"><h2 v-if="routeName !== 'Home'" class="navbar__logo-not-active">Logo</h2></router-link>
                 </div>
+        <!-- <div v-bind:style= "[routeName === 'Home' ? styleA : styleB]"><p style="color:red;">ALEKO</p></div> -->
                 <div class="navbar__more">
                     <div class="navbar__highlight">
                         <router-link to="/hotels">Hotels</router-link>
@@ -70,7 +77,21 @@ export default {
     data() {
         return {
             transitionName: null,
-            routeName: null
+            routeName: null,
+            styleA: {
+                // backgroundColor: 'blue',
+                width: '90%'
+            },
+            styleB: {
+                // backgroundColor: 'Green',
+                width: '95%'
+            },
+            styleC: {
+                // backgroundColor: 'pink'
+            },
+            styleD: {
+                // backgroundColor: 'yellow'
+            }
         }
     },
     // watch the `$route` to determine the transition to use
@@ -80,7 +101,12 @@ export default {
             const fromDepth = from.path.split('/').length
             this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
             this.routeName = to.name
-            console.log(`NavBar.vue - 61 - variable`, );
+
+            if (to.name === 'Home') {
+                this.styleObject = "backgroundColor: 'blue'"
+            }
+
+            console.log(`NavBar.vue - 94 - test`, this.styleObject);
         }
     }
 }
@@ -96,6 +122,9 @@ export default {
         padding: 0 1em;
         color: #fff;
         box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
+        // position: fixed;
+        // top: 0;
+        // width: 100%;
 
         @media (min-width: 570px) {
            padding: 0;

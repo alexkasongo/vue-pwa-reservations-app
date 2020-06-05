@@ -119,8 +119,8 @@ export default {
     .mapsingle {
         &__container {
             display: flex;
-            height: 490px;
-            // height: 100vh;
+            // height: 490px;
+            height: calc(100vh - 172px);
         }
 
         &__right {
