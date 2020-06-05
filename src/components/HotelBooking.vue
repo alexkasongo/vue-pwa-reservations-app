@@ -35,7 +35,7 @@
                                         
                                         <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4">&#9733;</label>
                                         
-                                        <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3">&#9733;</label>
+                                        <input type="radio" name="rating" value="3" id="star-3" checked> <label for="star-3">&#9733;</label>
                                         
                                         <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2">&#9733;</label>
                                         
@@ -50,9 +50,21 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle2" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle2">Stars</label>
+                            <label class="accordian-title" for="toggle2">Review score</label>
                             <div class="accordian-content">
-                                <h1>review score</h1>
+                                <div class="sqr-rating-box">
+                                    <div class="sqr-rating-container">
+                                        <input type="radio" name="rating" value="10" id="star-10"> <label for="star-10">&#9632;</label>
+                                        
+                                        <input type="radio" name="rating" value="9" id="star-9"> <label for="star-9">&#9632;</label>
+                                        
+                                        <input type="radio" name="rating" value="8" id="star-8"> <label for="star-8">&#9632;</label>
+                                        
+                                        <input type="radio" name="rating" value="7" id="star-7"> <label for="star-7">&#9632;</label>
+                                        
+                                        <input type="radio" name="rating" value="6" id="star-6"> <label for="star-6">&#9632;</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,9 +84,35 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle4" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle4">Stars</label>
+                            <label class="accordian-title" for="toggle4">Freebies</label>
                             <div class="accordian-content">
-                                <h1>freebies</h1>
+                                <div class="hotelb__left-freebies-checkbtn">
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Free breakfast</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Free parking</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Free internet</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Free cancelation</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Free airport shuttle</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,9 +121,11 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle5" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle5">Stars</label>
+                            <label class="accordian-title" for="toggle5">Hotel name</label>
                             <div class="accordian-content">
-                                <h1>search by name</h1>
+                                <div class="search__address">
+                                    <input type="text" placeholder="search by name">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,9 +134,11 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle6" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle6">Stars</label>
+                            <label class="accordian-title" for="toggle6">Hotel chain</label>
                             <div class="accordian-content">
-                                <h1>search by chain</h1>
+                                <div class="search__address">
+                                    <input type="text" placeholder="search by chain">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,9 +147,11 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle7" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle7">Stars</label>
+                            <label class="accordian-title" for="toggle7">Location</label>
                             <div class="accordian-content">
-                                <h1>search by location</h1>
+                                <div class="search__address">
+                                    <input type="text" placeholder="search by location">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,9 +160,45 @@
                     <div class="accordion">
                         <div class="accordian-option">
                             <input type="checkbox" id="toggle8" class="accordian-toggle" checked/>
-                            <label class="accordian-title" for="toggle8">Stars</label>
+                            <label class="accordian-title" for="toggle8">Neighborhoods</label>
                             <div class="accordian-content">
-                                <h1>search by neighborhoods</h1>
+                                <div class="hotelb__left-freebies-checkbtn">
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Bugesera</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Gatsibo</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Kayonza</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Kirehe</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Ngoma</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Nyagatare</span>
+                                    </label>
+                                    <label class="checkbox-button">
+                                        <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                        <span class="checkbox-button__control"></span>
+                                        <span class="checkbox-button__label">Rwamagana</span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,7 +351,12 @@ export default {
         */
         &__left-map {
             height: 100px;
-            margin: 0 0 10px 0;
+            margin: 0 0 20px 0;
+            background-color: #d4d4d4;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &__left-price-alert {
             margin: 0 0 10px 0;
@@ -283,7 +368,6 @@ export default {
             margin: 0 0 10px 0;
         }
         &__left-review {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-price {
@@ -291,23 +375,18 @@ export default {
             margin: 0 0 10px 0;
         }
         &__left-freebies {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-search-name {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-search-chain {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-search-location {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         &__left-search-neighborhoods {
-            height: 100px;
             margin: 0 0 10px 0;
         }
         /*
@@ -327,6 +406,11 @@ export default {
             margin: 0 10px 20px 0;
         }
         /*************************************/
+        
+        &__left-freebies-checkbtn {
+            display: flex;
+            flex-direction: column;
+        }
 
         /**
         * MIDDLE
@@ -537,11 +621,7 @@ export default {
         * MODIFIERS
         */
         .left-mod-one {
-            // border-radius: 8px;
-            // padding: 0 10px 0 0;
             align-items: center;
-            // box-shadow: 0 0 0 0.5pt #ccc;
-            background-color: #EEEEEE;
             color: #000;
             font-weight: 300;
         }
@@ -554,8 +634,8 @@ export default {
 .switch {
     position: relative;
     display: inline-block;
-    width: 30px;
-    height: 14px;
+    width: 34px;
+    height: 18px;
 }
 
 .switch input { 
@@ -579,8 +659,8 @@ export default {
 .slider:before {
     position: absolute;
     content: "";
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
     left: 2px;
     bottom: 2px;
     background-color: white;
@@ -646,7 +726,7 @@ input:checked + .slider:before {
 //   background: #fff;
   padding: 1em 0em 0em 0em;
   display: block;
-  color: red;
+  color: #000;
 }
 .accordian-title:after, .accordian-title:before {
   content: '';
@@ -655,7 +735,7 @@ input:checked + .slider:before {
   top: 1.25em;
   width: 1px;
   height: 0.75em;
-  background-color: red;
+  background-color: #000;
   transition: all 0.2s;
 }
 .accordian-title:after {
@@ -718,6 +798,48 @@ input:checked + .slider:before {
         color: #E59825;
         }
     }
+}
+.sqr-rating-box {
+    display: inline-block;
+    .sqr-rating-container {
+        direction: rtl !important;
+        label {
+            display: inline-block;
+            // margin: 30px 8px 0 0;
+            color: #d4d4d4;
+            // padding: 0 0 10px 0;
+            cursor: pointer;
+            font-size: 75px;
+            transition: color 0.2s;
+        }
+        input {
+            display: none;
+        }
+        label:hover, label:hover ~ label, input:checked ~ label  {
+            color: #E59825;
+        }
+    }
+}
+/*****************************************/
+/*
+* CHECKBOX 
+*/
+.checkbox-button__input {
+    margin: 10px 10px 0 0;
+}
+/*****************************************/
+
+/*
+* INPUT
+*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    height: 46px;
+    background-color: #EEEEEE;
+    border: 0;
+    border-radius: 8px;
 }
 /*****************************************/
 </style>
