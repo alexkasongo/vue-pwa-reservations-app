@@ -7,7 +7,7 @@
         </div>
         <div class="hotelb">
             <div class="hotelb__left">
-                <div class="hotelb__left-map left-mod-one">map</div>
+                <!-- <div class="hotelb__left-map left-mod-one">map</div> -->
                 <div class="hotelb__left-price-alert left-mod-one">
                     <div class="hotelb__left-alert-top">
                         <div class="hotelb__left-aler-bell">
@@ -205,8 +205,8 @@
                 </div>
             </div>
             <div class="hotelb__middle">
-                <div class="hotelb__middle-announcement">announcement</div>
-                <div class="hotelb__middle-signin">signin</div>
+                <!-- <div class="hotelb__middle-announcement">announcement</div>
+                <div class="hotelb__middle-signin">signin</div> -->
 
                 <div class="hotelbcard">
                     <div class="hotelbcard__searchbox" v-for="data in info" :key="data.id">
@@ -269,8 +269,8 @@
                 
             </div>
             <div class="hotelb__right">
-                <div class="hotelb__right-notifications">notifications</div>
-                <div class="hotelb__right-compare">compare</div>
+                <!-- <div class="hotelb__right-notifications">notifications</div>
+                <div class="hotelb__right-compare">compare</div> -->
             </div>
         </div>
     </div>
@@ -417,25 +417,25 @@ export default {
         */
         &__middle-announcement {
             height: 70px;
-            background-color: #fafafa;
+            background-color: #d4d4d4;
             margin: 0 0 10px 0;
             display: flex;
             justify-content: space-between;
             border-radius: 8px;
             padding: 0 10px;
             align-items: center;
-            box-shadow: 0 0 0 0.5pt #ccc;
+            // box-shadow: 0 0 0 0.5pt #ccc;
         }
         &__middle-signin {
             height: 40px;
-            background-color: #fafafa;
+            background-color: #d4d4d4;
             margin: 0 0 10px 0;
             border-radius: 8px;
             display: flex;
             justify-content: space-between;
             padding: 0 10px;
             align-items: center;
-            box-shadow: 0 0 0 0.5pt #ccc;
+            // box-shadow: 0 0 0 0.5pt #ccc;
         }
         /*************************************/
 
@@ -595,25 +595,25 @@ export default {
         */
         &__right-notifications {
             height: 250px;
-            background-color: #fafafa;
+            background-color: #d4d4d4;
             margin: 0 0 10px 0;
             border-radius: 8px;
             display: flex;
             justify-content: center;
             padding: 0 10px;
             align-items: center;
-            box-shadow: 0 0 0 0.5pt #ccc;
+            // box-shadow: 0 0 0 0.5pt #ccc;
         }
         &__right-compare {
             height: 150px;
-            background-color: #fafafa;
+            background-color: #d4d4d4;
             margin: 0 0 10px 0;
             border-radius: 8px;
             display: flex;
             justify-content: center;
             padding: 0 10px;
             align-items: center;
-            box-shadow: 0 0 0 0.5pt #ccc;
+            // box-shadow: 0 0 0 0.5pt #ccc;
         }
         /*************************************/
 
