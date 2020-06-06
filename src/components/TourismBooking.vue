@@ -2,8 +2,9 @@
     <div class="tb">
         <div class="tb__container">
             <div class="tb__left">
-                <div class="tbcard">
-                    <div class="tbcard__searchbox" v-for="data in info" :key="data.id">
+                <div class="tbcard" v-for="data in info" :key="data.id">
+                    <div class="tbcard__searchbox-up" :style="{ backgroundImage: `url(${data.url})` }"></div>
+                    <div class="tbcard__searchbox" >
                         <div class="tbcard__searchbox-start">
                             <div class="tbcard__searchbox-start--pd">
                                 <div class="tbcard__searchbox-title">
@@ -107,6 +108,7 @@ export default {
 
     &__left {
         width: 50%;
+        margin-top: 20px;
     }
     &__right {
         width: 50%;
@@ -125,13 +127,19 @@ export default {
             display: flex;
             width: 100%;
             height: 150px;
-            margin: 0 0 10px 0;
+            margin: 0 0 50px 0;
             background-color: #fafafa;
             // border: 1px solid #000;
         }
         &__searchbox:hover {
             box-shadow: 0 0 0 0.3pt #ccc;
             transition: all 0.2s ease;
+        }
+        &__searchbox-up {
+            height: 50px;
+            margin: 0 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
         &__searchbox-middle {
             width: 22%;
