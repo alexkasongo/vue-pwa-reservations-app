@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="tbcard__searchbox-signin tbcard__searchbox-mod">
                                         <p>Sign in to</p>
-                                        <p>unlock</p>
+                                        <p>view more</p>
                                     </div>
                                     <div class="tbcard__searchbox-more tbcard__searchbox-mod">
                                         <p>More Sites</p>
@@ -51,13 +51,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tbcard__searchbox-end">
+                            <!-- <div class="tbcard__searchbox-price tbcard__searchbox-mod">
+                                <p>View Deal</p>
+                            </div> -->
+                        </div>
                         <div class="tbcard__searchbox-middle">
                             <div class="tbcard__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
-                            </div>
-                        </div>
-                        <div class="tbcard__searchbox-end">
-                            <div class="tbcard__searchbox-price tbcard__searchbox-mod">
-                                <p>View Deal</p>
                             </div>
                         </div>
                     </div>
@@ -136,8 +136,8 @@ export default {
             transition: all 0.2s ease;
         }
         &__searchbox-up {
-            height: 50px;
-            margin: 0 10px;
+            height: 10px;
+            margin: 0 2px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
@@ -159,7 +159,7 @@ export default {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border-radius: 50%;
+            border-radius: 8px;
             width: 120px;
         }
         &__searchbox-start {

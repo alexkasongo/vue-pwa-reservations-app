@@ -93,4 +93,8 @@ table {
 .fade-leave-active {
   opacity: 0
 }
+
+*:focus {
+    outline: none;
+}
 </style>

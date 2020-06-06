@@ -11,7 +11,16 @@
                 </div>
                 <div class="search__grid-middle">
                     <div class="search__date">
-                        <input type="date" name="dateofreservation" id="dateofreservation">
+                        <!-- <input type="date" name="dateofreservation" id="dateofreservation"> -->
+                        <vc-date-picker 
+                            mode='range'
+                            :columns="$screens({ default: 1, lg: 2 })"
+                            :input-props='{
+                                style: "height: 46px; background-color: #EEEEEE; border-radius: 8px; border: none;",
+                                placeholder: "Please enter your birthday",
+                                readonly: true
+                            }'
+                        />
                     </div>
                     <div class="search__guests">
                         <input type="text" placeholder="2 guests">
@@ -40,6 +49,11 @@ export default {
     },
     data: function () {
         return {
+            date: new Date(),
+            range: {
+                start: new Date(), // Jan 16th, 2018
+                end: new Date()    // Jan 19th, 2018
+            },
             styleA: {
                 // backgroundColor: 'orange',
                 // position: "-webkit-sticky",
@@ -97,6 +111,7 @@ export default {
 
         @media (min-width: 570px) {
            flex-wrap: nowrap;
+            align-items: baseline;
         }
 
         @media (min-width: 1024px) {
@@ -106,6 +121,14 @@ export default {
 
     &__date {
         width: 100%;
+        // span {
+        //     input {
+        //             height: 46px;
+        //             background-color: #EEEEEE;
+        //             border-radius: 8px;
+        //             border: none;
+        //     }
+        // }
 
         @media (min-width: 570px) {
             margin: 0px 5px 0px 0px;
