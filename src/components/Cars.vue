@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="cars__right">
-                <MapSingle />
+                <MapSingle :routeName="this.$route.name"/>
             </div>
         </div>
     </div>

@@ -42,7 +42,7 @@
 
 
     <div class="restall__map">
-        <MapSingle />
+        <MapSingle :routeName="this.$route.name"/>
     </div>
 
 
@@ -152,20 +152,26 @@ import MapSingle from '@/components/MapSingle.vue';
 export default {
   name: 'RestaurantsAll',
   components: {
-    NavBar,
-    Hero,
-    Search,
-    Footer,
-    TopCarousel,
-    FavCarousel,
-    MapSingle
-  },
-  data() {
-      return {
-          info: [],
-          image: "https://via.placeholder.com/2000.png/"
-      }
-  }
+        NavBar,
+        Hero,
+        Search,
+        Footer,
+        TopCarousel,
+        FavCarousel,
+        MapSingle
+    },
+    data() {
+        return {
+            info: [],
+            image: "https://via.placeholder.com/2000.png/",
+            routeName: null
+        }
+    },
+    watch: {
+        '$route' (to, from) {
+            this.routeName = to.name
+        }
+    }
 }
 </script>
 

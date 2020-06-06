@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="tb__right">
-                <MapSingle />
+                <MapSingle :routeName="this.$route.name"/>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@ export default {
 
     &__container {
         display: flex;
-        height: 100vh;
+        height: 300vh;
     }
 
     &__left {

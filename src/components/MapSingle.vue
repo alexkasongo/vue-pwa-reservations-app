@@ -1,5 +1,10 @@
 <template>
-    <div class="mapsingle">
+    <div class="mapsingle" 
+      :style= "[
+          routeName === 'Tourism' ? sticky : styleD
+      ]"
+    >
+      <!-- <div class="test"><p style="color:black; font-size:18px;">{{routeName}}</p></div> -->
         <div class="mapsingle__container"
           :style= "[
               routeName === 'RestaurantsAll' ? styleA : 
@@ -15,7 +20,6 @@
                     :zoom="zoom"
                     :center="center"
                     :options="mapOptions"
-                    style="height: 100%"
                     @update:center="centerUpdate"
                     @update:zoom="zoomUpdate"
                     >
@@ -68,6 +72,9 @@ Icon.Default.mergeOptions({
 
 export default {
   name: "MapSingle",
+  props: {
+    routeName: String
+  },
   components: {
     LMap,
     LTileLayer,
@@ -77,7 +84,6 @@ export default {
   },
   data() {
     return {
-      routeName: null,
       zoom: 13,
       center: latLng(47.41322, -1.219482),
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -95,21 +101,24 @@ export default {
       showMap: true,
       info: [],
       styleA: {
-                // backgroundColor: 'blue',
-                height: '490px',
-            },
-            styleB: {
-                // backgroundColor: 'Green',
-                height: '100px',
-            },
-            styleC: {
-                // backgroundColor: 'pink',
-                height: '100px',
-            },
-            styleD: {
-                // backgroundColor: 'yellow'
-                height: '100px',
-            }
+        height: '490px',
+      },
+      styleB: {
+        height: 'calc(100vh - 172px)',
+      },
+      styleC: {
+        height: 'calc(100vh - 62px)',
+        // position: "fixed",
+        // width: '49%',
+      },
+      styleD: {
+        height: '400px',
+      },
+      sticky: {
+        position: "-webkit-sticky",
+        position: "sticky",
+        top: "62px"
+      }
     };
   },
   mounted() {
@@ -133,12 +142,6 @@ export default {
     innerClick() {
       alert("Click!");
     }
-  },
-  watch: {
-      '$route' (to, from) {
-          this.routeName = to.name
-          console.log(`NavBar.vue - 109 - variable`, to);
-      }
   }
 };
 </script>

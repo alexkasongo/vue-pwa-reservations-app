@@ -62,7 +62,12 @@ Vue.use(VueRouter)
     path: '/deep-search',
     name: 'DeepSearch',
     component: () => import(/* webpackChunkName: "hotels" */ '../views/DeepSearch.vue')
-  }
+  },
+  // {
+  //   path: '/map-single',
+  //   name: 'MapSingle',
+  //   component: () => import(/* webpackChunkName: "hotels" */ '../components/MapSingle.vue')
+  // }
 ]
 
 const router = new VueRouter({
