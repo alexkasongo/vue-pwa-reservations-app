@@ -22,8 +22,8 @@ export default {
 
 <style lang="scss">
   .trans {
-      &__cars {
-        margin: 82px 0 0 0;
-      }
+      // &__cars {
+      //   margin: 82px 0 0 0;
+      // }
   }
 </style>

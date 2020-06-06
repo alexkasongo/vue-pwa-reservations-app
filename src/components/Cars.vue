@@ -1,7 +1,9 @@
 <template>
     <div class="cars">
         <div class="cars__search">
-            <Search />
+            <div class="cars__search-bar">
+                <Search :routeName="this.$route.name"/>
+            </div>
         </div>
         <div class="cars__container">
             <div class="cars__left">
@@ -79,7 +81,7 @@ import MapSingle from '@/components/MapSingle.vue';
 
 export default {
     name: "Cars",
-    props: [''],
+    props: {},
     components: {
         Search,
         MapSingle
@@ -90,7 +92,7 @@ export default {
         }
     },
     mounted() {
-        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=8"
+        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=16"
         this.axios.get(URL)
         .then((result) => {
             this.info = result.data
@@ -104,23 +106,35 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .cars {
-    margin: 0 0 0 2%;
+    // margin: 0 0 0 2%;
 
     &__search {
+        // width: 80%;
+        padding: 82px 0 30px 0;
+        background: #fff;
+        position:fixed ;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__search-bar {
         width: 80%;
-        margin: 0 0 30px 0;
+        margin: 0 0 0 2%;
     }
     
     &__container {
         display: flex;
         height: 100vh;
+        margin: 0 0 0 2%;
     }
 
     &__left {
         width: 50%;
+        margin-top: 184px;
     }
     &__right {
         width: 50%;
+        margin-top: 168px;
     }
 
     /*

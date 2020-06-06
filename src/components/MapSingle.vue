@@ -1,7 +1,8 @@
 <template>
     <div class="mapsingle" 
       :style= "[
-          routeName === 'Tourism' ? sticky : styleD
+          routeName === 'Tourism' ? stickyA :
+          routeName === 'Transportation' ? stickyB : styleD
       ]"
     >
       <!-- <div class="test"><p style="color:black; font-size:18px;">{{routeName}}</p></div> -->
@@ -104,7 +105,10 @@ export default {
         height: '490px',
       },
       styleB: {
+        // height: '100vh',
         height: 'calc(100vh - 172px)',
+        position: "fixed",
+        width: '49%',
       },
       styleC: {
         height: 'calc(100vh - 62px)',
@@ -112,12 +116,17 @@ export default {
         // width: '49%',
       },
       styleD: {
-        height: '400px',
+        // height: '400px',
       },
-      sticky: {
+      stickyA: {
         position: "-webkit-sticky",
         position: "sticky",
         top: "62px"
+      },
+      stickyB: {
+        // position: "-webkit-sticky",
+        // position: "sticky",
+        // top: "62px"
       }
     };
   },

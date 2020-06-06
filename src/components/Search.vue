@@ -1,5 +1,9 @@
 <template>
-    <div class="search">
+    <div class="search" 
+        :style= "[
+          routeName === 'Transportation' ? styleA : styleB
+      ]"
+    >
         <div class="search__search">
             <div class="search__grid">
                 <div class="search__address">
@@ -31,10 +35,20 @@
 <script>
 export default {
     name: "Search",
-    props: [''],
+    props: {
+        routeName: String
+    },
     data: function () {
         return {
-            
+            styleA: {
+                // backgroundColor: 'orange',
+                // position: "-webkit-sticky",
+                // position: "sticky",
+                // top: "62px"
+            },
+            styleB: {
+                // backgroundColor: 'red'
+            }
         }
     },
     mounted() {
