@@ -118,7 +118,7 @@ export default {
     }
 
     &__search-bar {
-        width: 80%;
+        width: 85%;
         margin: 0 0 0 2%;
     }
     
@@ -299,6 +299,7 @@ export default {
             font-weight: 300;
             display: flex;
             justify-content: center;
+            cursor: pointer;
         }
     }
     /*************************************/

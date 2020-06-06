@@ -14,10 +14,11 @@
                         <!-- <input type="date" name="dateofreservation" id="dateofreservation"> -->
                         <vc-date-picker 
                             mode='range'
+                            v-model='range'
                             :columns="$screens({ default: 1, lg: 2 })"
                             :input-props='{
-                                style: "height: 46px; background-color: #EEEEEE; border-radius: 8px; border: none;",
-                                placeholder: "Please enter your birthday",
+                                style: "height: 46px; background-color: #EEEEEE; border-radius: 8px; border: none; font-size: 14px;",
+                                placeholder: this.date,
                                 readonly: true
                             }'
                         />
@@ -99,7 +100,7 @@ export default {
 
     &__address {
         @media (min-width: 1024px) {
-            width: 80%;
+            width: 55%;
             margin-right: 5px;
         }
     }
