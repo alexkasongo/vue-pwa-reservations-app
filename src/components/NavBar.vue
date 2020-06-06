@@ -3,9 +3,10 @@
       <div class="navbar">
           <div class="navbar__container" 
             :style= "[
-                    routeName === 'Hotels' ? styleA : 
-                    routeName === 'Transportation' ? styleB : 
-                    routeName === 'Transportation' ? styleC : styleD
+                    routeName === 'Home' ? styleA : 
+                    routeName === 'Hotels' ? styleB : 
+                    routeName === 'Transportation' ? styleC : 
+                    routeName === 'Tourism' ? styleD : styleE
                 ]"
             >
             <div class="navbar__left">
@@ -80,17 +81,21 @@ export default {
             routeName: null,
             styleA: {
                 // backgroundColor: 'blue',
-                width: '90%'
             },
             styleB: {
                 // backgroundColor: 'Green',
-                width: '95%'
+                width: '90%'
             },
             styleC: {
-                // backgroundColor: 'pink'
+                // backgroundColor: 'pink',
+                width: '96%'
             },
             styleD: {
                 // backgroundColor: 'yellow'
+                width: '96%'
+            },
+            styleE: {
+                // backgroundColor: 'purple'
             }
         }
     },
@@ -101,12 +106,6 @@ export default {
             const fromDepth = from.path.split('/').length
             this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
             this.routeName = to.name
-
-            if (to.name === 'Home') {
-                this.styleObject = "backgroundColor: 'blue'"
-            }
-
-            console.log(`NavBar.vue - 94 - test`, this.styleObject);
         }
     }
 }
@@ -115,7 +114,6 @@ export default {
 <style lang="scss">
     .navbar {
         background-color: #fafafafa;
-        // background-color: #FFA501;
         height: 62px;
         display: flex;
         align-items: center;

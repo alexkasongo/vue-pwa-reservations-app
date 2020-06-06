@@ -1,18 +1,15 @@
 <template>
-    <div class="cars">
-        <div class="cars__search">
-            <Search />
-        </div>
-        <div class="cars__container">
-            <div class="cars__left">
-                <div class="carcard">
-                    <div class="carcard__searchbox" v-for="data in info" :key="data.id">
-                        <div class="carcard__searchbox-start">
-                            <div class="carcard__searchbox-start--pd">
-                                <div class="carcard__searchbox-title">
+    <div class="tb">
+        <div class="tb__container">
+            <div class="tb__left">
+                <div class="tbcard">
+                    <div class="tbcard__searchbox" v-for="data in info" :key="data.id">
+                        <div class="tbcard__searchbox-start">
+                            <div class="tbcard__searchbox-start--pd">
+                                <div class="tbcard__searchbox-title">
                                     <h2>Conrad Fort Lauderdale Beach</h2>
                                 </div>
-                                <div class="carcard__searchbox-rating">
+                                <div class="tbcard__searchbox-rating">
                                     <div class="rating-box">
                                         <div class="rating-container">
                                             <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5">&#9733;</label>
@@ -26,47 +23,46 @@
                                             <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1">&#9733;</label>
                                         </div>
                                     </div>
-                                    <!-- <p class="carcard__searchbox-reviews">65 reviews</p> -->
                                 </div>
-                                <div class="carcard__searchbox-options">
-                                    <div class="carcard__searchbox-type">
+                                <div class="tbcard__searchbox-options">
+                                    <div class="tbcard__searchbox-type">
                                         <p>Option-1</p>
                                         <p>Option-2</p>
                                         <p>Option-3</p>
                                     </div>
                                 </div>
-                                <div class="carcard__searchbox-place">
+                                <div class="tbcard__searchbox-place">
                                     <p>Downtown</p>
                                 </div>
-                                <div class="carcard__searchbox-times">
-                                    <div class="carcard__searchbox-deal carcard__searchbox-mod">
+                                <div class="tbcard__searchbox-times">
+                                    <div class="tbcard__searchbox-deal tbcard__searchbox-mod">
                                         <p>Private Deal</p>
                                         <p>$200</p>
                                     </div>
-                                    <div class="carcard__searchbox-signin carcard__searchbox-mod">
+                                    <div class="tbcard__searchbox-signin tbcard__searchbox-mod">
                                         <p>Sign in to</p>
                                         <p>unlock</p>
                                     </div>
-                                    <div class="carcard__searchbox-more carcard__searchbox-mod">
+                                    <div class="tbcard__searchbox-more tbcard__searchbox-mod">
                                         <p>More Sites</p>
                                         <p>$200</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carcard__searchbox-middle">
-                            <div class="carcard__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
+                        <div class="tbcard__searchbox-middle">
+                            <div class="tbcard__searchbox-image" :style="{ backgroundImage: `url(${data.url})` }">
                             </div>
                         </div>
-                        <div class="carcard__searchbox-end">
-                            <div class="carcard__searchbox-price carcard__searchbox-mod">
+                        <div class="tbcard__searchbox-end">
+                            <div class="tbcard__searchbox-price tbcard__searchbox-mod">
                                 <p>View Deal</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="cars__right">
+            <div class="tb__right">
                 <MapSingle />
             </div>
         </div>
@@ -74,14 +70,12 @@
 </template>
 
 <script>
-import Search from '@/components/Search.vue';
 import MapSingle from '@/components/MapSingle.vue';
 
 export default {
-    name: "Cars",
+    name:'TourismBooking',
     props: [''],
     components: {
-        Search,
         MapSingle
     },
     data: function () {
@@ -103,14 +97,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.cars {
+.tb {
     margin: 0 0 0 2%;
 
-    &__search {
-        width: 80%;
-        margin: 0 0 30px 0;
-    }
-    
     &__container {
         display: flex;
         height: 100vh;
@@ -126,7 +115,7 @@ export default {
     /*
     * CARD
     */
-    .carcard {
+    .tbcard {
 
         margin: 0 20px 0 0;
 
@@ -288,5 +277,6 @@ export default {
         }
     }
     /*************************************/
+
 }
-</style>
+</style>            

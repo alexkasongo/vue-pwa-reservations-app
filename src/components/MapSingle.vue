@@ -1,9 +1,15 @@
 <template>
     <div class="mapsingle">
-        <div class="mapsingle__container">
+        <div class="mapsingle__container"
+          :style= "[
+              routeName === 'RestaurantsAll' ? styleA : 
+              routeName === 'Transportation' ? styleB : 
+              routeName === 'Tourism' ? styleC : styleD
+          ]"
+        >
             <!-- actual mapsingle -->
             <div class="mapsingle__right">
-                <div style="height: 100%; width: 100%">
+                <div class="mapsingle__width">
                     <l-map
                     v-if="showMap"
                     :zoom="zoom"
@@ -71,6 +77,7 @@ export default {
   },
   data() {
     return {
+      routeName: null,
       zoom: 13,
       center: latLng(47.41322, -1.219482),
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -86,7 +93,23 @@ export default {
         scrollWheelZoom: false
       },
       showMap: true,
-      info: []
+      info: [],
+      styleA: {
+                // backgroundColor: 'blue',
+                height: '490px',
+            },
+            styleB: {
+                // backgroundColor: 'Green',
+                height: '100px',
+            },
+            styleC: {
+                // backgroundColor: 'pink',
+                height: '100px',
+            },
+            styleD: {
+                // backgroundColor: 'yellow'
+                height: '100px',
+            }
     };
   },
   mounted() {
@@ -110,6 +133,12 @@ export default {
     innerClick() {
       alert("Click!");
     }
+  },
+  watch: {
+      '$route' (to, from) {
+          this.routeName = to.name
+          console.log(`NavBar.vue - 109 - variable`, to);
+      }
   }
 };
 </script>
@@ -120,11 +149,15 @@ export default {
         &__container {
             display: flex;
             // height: 490px;
-            height: calc(100vh - 172px);
+            // height: calc(100vh - 172px);
         }
 
         &__right {
             width: 100%;
+        }
+        &__width {
+          height: 100%;
+          width: 100%;
         }
     }
 

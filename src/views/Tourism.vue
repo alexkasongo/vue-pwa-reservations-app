@@ -1,15 +1,8 @@
 <template>
   <div class="tourism">
-    <!-- <NavBar class="navbar-fixed"/> -->
-    <Booking 
-        headline="Search hundreds of tourism spots at once." 
-        topheadline="Top Kigali tourism spots" 
-        favheadline="Rwandan favorites in Kigali" 
-        carouselmsg="Explore now."
-        searchby="Search tourism spots by destination"
-        find="Find tourism spots"
-        bookingmsg="spots"
-    />
+    <div class="tb__comp">
+      <TourismBooking />
+    </div>
     <Footer />
   </div>
 </template>
@@ -19,13 +12,21 @@
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
 import Booking from '@/components/Booking.vue'
+import TourismBooking from '@/components/TourismBooking.vue'
 
 export default {
   name: 'Tourism',
   components: {
     NavBar,
     Footer,
-    Booking
+    Booking,
+    TourismBooking
   }
 }
 </script>
+
+<style lang="scss">
+  .tb__comp {
+    margin: 62px 0 0 0;
+  }
+</style>
