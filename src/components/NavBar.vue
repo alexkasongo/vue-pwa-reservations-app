@@ -245,7 +245,7 @@ export default {
 
     .bm-burger-button {
         height: 15px !important;
-        width: 18px !important;
+        width: 30px !important;
     }
 
     .bm-menu {

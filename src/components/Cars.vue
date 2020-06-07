@@ -112,25 +112,49 @@ export default {
         // width: 80%;
         padding: 82px 0 30px 0;
         background: #fff;
-        position:fixed ;
-        z-index: 1;
         width: 100%;
+
+        @media (min-width: 1024px) {
+            position:fixed ;
+            z-index: 1;
+        }
     }
 
     &__search-bar {
-        width: 85%;
-        margin: 0 0 0 2%;
+        width: 100%;
+        margin: auto;
+
+        @media (min-width: 570px) {
+            width: 95%;
+        }
+        @media (min-width: 1024px) {
+            width: 85%;
+            margin: 0 0 0 2%;
+        }
     }
     
     &__container {
         display: flex;
         height: 100vh;
-        margin: 0 0 0 2%;
+        flex-direction: column;
+        margin: auto;
+        flex-direction: column;
+        width: 95%;
+
+        @media (min-width: 1024px) {
+                flex-direction: row;
+                margin: 0 0 0 2%;
+                width: 100%;
+        }
     }
 
     &__left {
-        width: 50%;
-        margin-top: 184px;
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 50%;
+            margin-top: 184px;
+        }
     }
     &__right {
         width: 50%;
@@ -142,34 +166,45 @@ export default {
     */
     .carcard {
 
-        margin: 0 20px 0 0;
+        @media (min-width: 1024px) {
+            margin: 0 20px 0 0;
+        }
 
         &__searchbox {
             box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
             border-radius: 8px;
             display: flex;
             width: 100%;
-            height: 150px;
+            height: 200px;
             margin: 0 0 10px 0;
             background-color: #fafafa;
             // border: 1px solid #000;
+            @media (min-width: 1024px) {
+                height: 150px;
+            }
         }
         &__searchbox:hover {
             box-shadow: 0 0 0 0.3pt #ccc;
             transition: all 0.2s ease;
         }
         &__searchbox-middle {
-            width: 22%;
             display: flex;
             justify-content: center;
             align-items: center;
+            @media (min-width: 1024px) {
+                width: 22%;
+            }
         }
         &__searchbox-end {
+            display: none;
             width: 18%;
-            display: flex;
+            
             justify-content: center;
             align-items: center;
-            // padding: 0 0 30px 0;
+
+            @media (min-width: 570px) {
+               display: flex;
+            }
         }
         &__searchbox-image {
             height: 120px;
@@ -278,6 +313,7 @@ export default {
             }
         }
         &__searchbox-more {
+            display: none;
             p {
                 font-size: 14px;
                 font-weight: 300;
@@ -287,6 +323,9 @@ export default {
             }
             p:nth-child(2) {
                 color: green;
+            }
+            @media (min-width: 570px) {
+               display: unset;
             }
         }
         &__searchbox-price {

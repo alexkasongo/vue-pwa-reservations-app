@@ -99,37 +99,58 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .tb {
-    margin: 0 0 0 2%;
+    width: 95%;
+    margin: auto;
+    @media (min-width: 1024px) {
+        margin: 0 0 0 2%;
+    }
 
     &__container {
         display: flex;
-        height: 300vh;
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+            flex-direction: column;
+            height: 300vh;
+        }
     }
 
     &__left {
-        width: 50%;
+        width: 100%;
         margin-top: 20px;
+
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
     }
     &__right {
-        width: 50%;
+        width: 100%;
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
     }
 
     /*
     * CARD
     */
     .tbcard {
-
-        margin: 0 20px 0 0;
+        margin: 0 0 0 0;
+        @media (min-width: 1024px) {
+            margin: 0 20px 0 0;
+        }
 
         &__searchbox {
             box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
             border-radius: 8px;
             display: flex;
             width: 100%;
-            height: 150px;
+            height: 190px;
             margin: 0 0 50px 0;
             background-color: #fafafa;
             // border: 1px solid #000;
+            @media (min-width: 1024px) {
+               height: 150px;
+            }
         }
         &__searchbox:hover {
             box-shadow: 0 0 0 0.3pt #ccc;
@@ -148,11 +169,14 @@ export default {
             align-items: center;
         }
         &__searchbox-end {
-            width: 18%;
+            width: 15%;
             display: flex;
             justify-content: center;
             align-items: center;
             // padding: 0 0 30px 0;
+            @media (min-width: 1024px) {
+               width: 18%;
+            }
         }
         &__searchbox-image {
             height: 120px;
@@ -261,6 +285,7 @@ export default {
             }
         }
         &__searchbox-more {
+                display: none;
             p {
                 font-size: 14px;
                 font-weight: 300;
@@ -270,6 +295,10 @@ export default {
             }
             p:nth-child(2) {
                 color: green;
+            }
+
+            @media (min-width: 1024px) {
+                   display: unset;
             }
         }
         &__searchbox-price {
