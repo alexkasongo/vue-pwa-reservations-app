@@ -47,15 +47,18 @@ export default {
 
 <style lang="scss">
 .top-carousel {
-    
+    width: 95%;
+    margin: auto;
 
     @media (min-width: 570px) {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5px;
     }
 
     @media (min-width: 1024px) {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 5px;

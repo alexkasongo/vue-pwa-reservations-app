@@ -178,14 +178,33 @@ export default {
 <style scoped lang="scss">
     .map {
         &__container {
-            display: flex;
-            height: 100vh;
+            // display: flex;
+            // height: 100vh;
+            @media (min-width: 1024px) {
+                display: flex;
+                height: 100vh;
+            }
         }
 
         &__left {
-            width: 55%;
-            margin-left: 10%;
+            width: 95%;
+            margin: auto;
             // overflow-y: scroll; 
+            @media (min-width: 570px) {
+                width: 90%;
+                margin-left: auto;
+            }
+            @media (min-width: 1024px) {
+                width: 55%;
+                margin-left: 10%;
+            }
+        }
+
+        &__left-content {
+            @media (min-width: 1024px) {
+                overflow: auto;
+                height: 100vh;
+            }
         }
 
         &__right {
@@ -195,25 +214,49 @@ export default {
         &__searchbox {
             display: flex;
             width: 100%;
-            height: 200px;
             margin: 0 0 10px 0;
+            flex-direction: column;
+
+            @media (min-width: 1024px) {
+               flex-direction: row;
+               height: 200px;
+            }
         }
 
         &__searchbox-left {
-            width: 30%;
+            
+            @media (min-width: 1024px) {
+                width: 30%;
+            }
         }
 
         &__searchbox-right {
-            width: 70%;
+            width: 100%;
             display: flex;
             align-items: center;
             margin: 0 0px 0 0;
             cursor: pointer;
+
+            @media (min-width: 1024px) {
+               width: 70%;
+            }
             
 
             &--pd {
-                padding: 0 10px 0 15px;
                 width: 100%;
+                margin: 0 0 30px 0;
+                padding: 10px 10px 0 10px;
+
+                @media (min-width: 570px) {
+                   width: 100%;
+                }
+
+                @media (min-width: 1024px) {
+                    padding: 0 10px 0 15px;
+                    width: 100%;
+                    margin: 0 0 0 0;
+                }
+
             }
 
         }
@@ -229,6 +272,10 @@ export default {
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 8px;
+            margin: 0 0 10px 0;
+            @media (min-width: 1024px) {
+                   margin: 0 0 0 0;
+            }
         }
 
 
@@ -307,16 +354,17 @@ export default {
     }
 
 /*------THE TRICK------*/
-    #hidingScrollBar{
-    overflow: hidden;
-    }
+    // #hidingScrollBar{
+    // overflow: hidden;
+    // }
     .hideScrollBar{
     width: 100%;
-    height: 100%;
-    overflow: auto;
     margin-right: 14px;
-    padding-right: 28px; 
     padding-bottom: 15px;
+
+        @media (min-width: 1024px) {
+           padding-right: 28px; 
+        }
     }
     /*---------------------*/
     

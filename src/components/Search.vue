@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 </div>
-            <div class="search__search">
+            <div class="search__search-button">
                 <router-link to="/deep-search">
                     <button class="search__button">
                         <i class="fas fa-search"></i>
@@ -81,10 +81,19 @@ export default {
     margin: auto;
 
     &__search {
+        width: 95%;
+        margin: auto;
+
+        @media (min-width: 570px) {
+           width: 100%;
+           margin: 0;
+        }
+
         @media (min-width: 1024px) {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
+            width: auto;
         }
     }
 
@@ -122,14 +131,7 @@ export default {
 
     &__date {
         width: 100%;
-        // span {
-        //     input {
-        //             height: 46px;
-        //             background-color: #EEEEEE;
-        //             border-radius: 8px;
-        //             border: none;
-        //     }
-        // }
+        margin-top: 5px;
 
         @media (min-width: 570px) {
             margin: 0px 5px 0px 0px;

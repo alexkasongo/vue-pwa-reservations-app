@@ -216,7 +216,6 @@ export default {
 
 <style lang="scss">
 .booking {
-    width: 300px;
     margin: 120px auto;
     
     @media (min-width: 570px) {
@@ -264,8 +263,14 @@ export default {
     }
 
     &__rec-title {
-        margin: 0px 0px 15px 0px;
+        width: 95%;
+        margin: 0 auto 15px auto;
         display: flex;
+
+        @media (min-width: 570px) {
+            width: 100%;
+            margin: 0 auto 15px auto;
+        }
 
         &--left {
             width: 80%;
@@ -311,7 +316,12 @@ export default {
     }
     
     &__destination {
-        margin: 3em 0 0 0;
+        margin: 3em auto 0 auto;
+        width: 95%;
+
+        @media (min-width: 570px) {
+           width: 100%;
+        }
         
         h3 {
             font-size: 22px;
@@ -348,6 +358,13 @@ export default {
 $font-color: #212a30;
 
 .accordion {
+    width: 95%;
+    margin: auto;
+
+    @media (min-width: 570px) {
+       width: 100%;
+    }
+
     @media (min-width: 1024px) {
         display: flex;
         flex-wrap: wrap;

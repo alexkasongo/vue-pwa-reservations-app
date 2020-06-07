@@ -324,23 +324,39 @@ export default {
 
 
         &__hbsearch {
-            width: 90%;
             margin: auto;
+            @media (min-width: 570px) {
+               width: 95%;
+            }
         }
     }
     .hotelb {
         display: flex;
-        width: 90%;
-        margin: 0 auto 50px auto;
-        // height: 100vh;
+        width: 95%;
+        margin: auto;
+        flex-direction: column;
+        
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            width: 90%;
+            margin: 0 auto 50px auto;
+        }
 
         &__left {
+            display: none;
             width: 20%;
             margin: 0 12px 0 0;
+
+            @media (min-width: 1024px) {
+               display: unset;
+            }
         }
         &__middle {
-            width: 65%;
+            width: 100%;
             margin: 0 12px 0 0;
+            @media (min-width: 1024px) {
+                width: 65%;
+            }
         }
         &__right {
             width: 25%;
@@ -534,6 +550,7 @@ export default {
                 margin: 20px 0 0 0;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
             }
             &__searchbox-mod {
                 display: flex;
@@ -553,6 +570,7 @@ export default {
                 }
             }
             &__searchbox-signin {
+                display: none;
                 border-radius: 8px;
                 border: 1px solid #ccc;
                 padding: 5px 25px;
@@ -565,8 +583,13 @@ export default {
                 p:first-child {
                     margin: 0 0 5px 0;
                 }
+
+                @media (min-width: 1024px) {
+                   display: unset;
+                }
             }
             &__searchbox-more {
+                display: none;
                 p {
                     font-size: 14px;
                     font-weight: 300;
@@ -577,15 +600,21 @@ export default {
                 p:nth-child(2) {
                     color: green;
                 }
+                @media (min-width: 570px) {
+                   display: unset;
+                }
             }
             &__searchbox-price {
                 background-color: orange;
                 width: max-content;
-                padding: 10px 25px;
+                padding: 10px 10px;
                 border-radius: 8px;
                 color: #fff;
                 font-size: 14px;
                 font-weight: 300;
+                @media (min-width: 570px) {
+                   padding: 10px 25px;
+                }
             }
         }
         /*************************************/
