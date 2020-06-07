@@ -228,7 +228,7 @@ export default {
 
     .bm-burger-button {
         right: 10px !important;
-        top: 25px;
+        top: 25px !important;
 
         @media (min-width: 1024px) {
            right: 15px !important;
@@ -240,17 +240,17 @@ export default {
     }
 
     .bm-burger-bars {
-        background-color: #000;
+        background-color: #000 !important;
     }
 
     .bm-burger-button {
-        height: 15px;
-        width: 18px;
+        height: 15px !important;
+        width: 18px !important;
     }
 
     .bm-menu {
-        background-color: #339DBE;
-        height: calc(100% - 62px);
+        background-color: #339DBE !important;
+        height: calc(100% - 62px) !important;
         left: 0;
         overflow-x: hidden;
         padding-top: 60px;
@@ -259,6 +259,7 @@ export default {
         transition: .5s;
         width: 0;
         z-index: 1000;
+        margin: 62px 0 0 0 !important;
     }
 
 /*
