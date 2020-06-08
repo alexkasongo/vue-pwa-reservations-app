@@ -106,7 +106,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .cars {
-    // margin: 0 0 0 2%;
+    // padding: 0 0 0 2%;
 
     &__search {
         // width: 80%;
@@ -129,7 +129,7 @@ export default {
         }
         @media (min-width: 1024px) {
             width: 85%;
-            margin: 0 0 0 2%;
+            padding: 0 0 0 2%;
         }
     }
     
@@ -143,7 +143,7 @@ export default {
 
         @media (min-width: 1024px) {
                 flex-direction: row;
-                margin: 0 0 0 2%;
+                padding: 0 0 0 2%;
                 width: 100%;
         }
     }

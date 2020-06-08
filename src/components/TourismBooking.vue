@@ -102,7 +102,8 @@ export default {
     width: 95%;
     margin: auto;
     @media (min-width: 1024px) {
-        margin: 0 0 0 2%;
+        width: 100%;
+        padding: 0 0 0 2%;
     }
 
     &__container {
