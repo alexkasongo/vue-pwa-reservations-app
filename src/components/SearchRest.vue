@@ -7,7 +7,17 @@
                 </div>
                 <div class="searchrest__grid-middle">
                     <div class="searchrest__date">
-                        <input type="date" name="dateofreservation" id="dateofreservation">
+                        <!-- <input type="date" name="dateofreservation" id="dateofreservation"> -->
+                        <vc-date-picker 
+                            mode='range'
+                            v-model='range'
+                            :columns="$screens({ default: 1, lg: 2 })"
+                            :input-props='{
+                                style: "height: 46px; background-color: #EEEEEE; border-radius: 8px; border: none; font-size: 14px; z-index: 1001;",
+                                placeholder: this.date,
+                                readonly: true
+                            }'
+                        />
                     </div>
                     <div class="searchrest__guests">
                         <input type="text" placeholder="2 guests">
@@ -35,7 +45,11 @@ export default {
     props: [''],
     data: function () {
         return {
-            
+            date: new Date(),
+            range: {
+                start: new Date(), // Jan 16th, 2018
+                end: new Date()    // Jan 19th, 2018
+            }
         }
     },
     mounted() {
@@ -101,9 +115,9 @@ export default {
 
     &__date {
         width: 100%;
-        margin: 0 0 0 0;
+        margin: 5px 0 0 0;
         @media (min-width: 1024px) {
-            margin: 0px 5px 0px 0px;
+            margin: 5px 5px 0 0;
         }
     }
 
@@ -178,6 +192,10 @@ export default {
     }
 
 }
+
+// .vc-popover-content-wrapper {
+//     z-index: 1001 !important;
+// }
 
 
 </style>

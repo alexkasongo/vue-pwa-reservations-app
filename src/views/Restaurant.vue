@@ -170,7 +170,7 @@
                     :zoom="zoom"
                     :center="center"
                     :options="mapOptions"
-                    style="height: 100%"
+                    style="height: 100%; z-index: 0;"
                     @update:center="centerUpdate"
                     @update:zoom="zoomUpdate"
                     >
@@ -597,7 +597,7 @@ export default {
 
         &__search-left {
             display: none;
-            width: 30%;
+            width: 40%;
             @media (min-width: 1024px) {
                display: unset;
             }
@@ -606,6 +606,7 @@ export default {
         &__search-right {
             display: flex;
             align-items: center;
+            width: 100%;
         }
 
         &__search-right:hover {
@@ -615,7 +616,7 @@ export default {
         }
 
         &__search-right--pd {
-            padding: 0 0 0 0;
+            padding: 15px 10px;
             width: 100%;
             @media (min-width: 1024px) {
                 padding: 0 10px 0 15px;
