@@ -105,18 +105,17 @@ export default {
         height: '490px',
       },
       styleB: {
-        // height: '100vh',
         height: 'calc(100vh - 172px)',
-        position: "fixed",
-        width: '49%',
       },
       styleC: {
         height: 'calc(100vh - 62px)',
-        // position: "fixed",
-        // width: '49%',
+        position: "fixed",
+        width: '49%',
+        
       },
       styleD: {
         // height: '400px',
+        
       },
       stickyA: {
         position: "-webkit-sticky",
@@ -127,7 +126,13 @@ export default {
         // position: "-webkit-sticky",
         // position: "sticky",
         // top: "62px"
-      }
+      },
+      // css: {
+      //   height: 'calc(100vh - 172px)',
+      //   position: "fixed",
+      //   width: '49%',
+        
+      // }
     };
   },
   mounted() {
@@ -151,6 +156,32 @@ export default {
     innerClick() {
       alert("Click!");
     }
+  },
+  computed: {
+    css () {
+
+      const height = 'calc(100vh - 172px)'
+      const width = '49%'
+      // const position = 'fixed'
+      const media = `@media (min-width: 1024px) {position: fixed;}`
+
+      // if (window.matchMedia("(min-width: 1024px)").matches) {
+        return {
+          height,
+          width,
+          // position,
+          media
+        }
+      // } 
+
+      // if(window.matchMedia("(max-width: 570px)").matches) {
+      //   return {
+      //     height,
+      //     width: '49%',
+      //     position: 'block'
+      //   }
+      // }
+    }
   }
 };
 </script>
@@ -160,8 +191,12 @@ export default {
     .mapsingle {
         &__container {
             display: flex;
-            // height: 490px;
-            // height: calc(100vh - 172px);
+            width: 100%;
+            @media (min-width: 1024px) {
+              position: fixed;
+              width: '49%',
+            }
+
         }
 
         &__right {
@@ -172,6 +207,5 @@ export default {
           width: 100%;
         }
     }
-
-
+    
 </style>

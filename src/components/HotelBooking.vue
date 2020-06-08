@@ -328,6 +328,9 @@ export default {
             @media (min-width: 570px) {
                width: 95%;
             }
+            @media (min-width: 1024px) {
+               width: 90%;
+            }
         }
     }
     .hotelb {

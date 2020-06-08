@@ -130,6 +130,7 @@ export default {
         @media (min-width: 1024px) {
             width: 85%;
             padding: 0 0 0 2%;
+            margin: 0;
         }
     }
     
@@ -157,8 +158,11 @@ export default {
         }
     }
     &__right {
-        width: 50%;
-        margin-top: 168px;
+        width: 100%;
+        @media (min-width: 1024px) {
+            width: 50%;
+            margin-top: 168px;
+        }
     }
 
     /*
