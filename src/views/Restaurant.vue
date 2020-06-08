@@ -331,6 +331,13 @@ export default {
             }
         }
 
+        &__search:hover {
+            padding: 0 5px;
+            @media (min-width: 1024px) {
+                   padding: 0;
+            }
+        }
+
         &__locations-default {
             margin: 0 0 50px 0;
             
@@ -612,7 +619,7 @@ export default {
         &__search-right:hover {
             box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
             border-radius: 8px;
-            transition: all 0.5s ease;
+            transition: all 0.2s ease;
         }
 
         &__search-right--pd {

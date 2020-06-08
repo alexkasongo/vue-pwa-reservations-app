@@ -263,7 +263,7 @@ export default {
         &__searchbox-right:hover {
             box-shadow: 1px 3px 5px rgba(32, 33, 30, 0.28);
             border-radius: 8px;
-            transition: all 0.5s ease;
+            transition: all 0.2s ease;
         }
 
         &__searchbox-image {
