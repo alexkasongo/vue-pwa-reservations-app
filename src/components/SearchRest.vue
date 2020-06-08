@@ -101,12 +101,18 @@ export default {
 
     &__date {
         width: 100%;
-        margin: 0px 5px 0px 0px;
+        margin: 0 0 0 0;
+        @media (min-width: 1024px) {
+            margin: 0px 5px 0px 0px;
+        }
     }
 
     &__guests {
         width: 100%;
-        margin: 0px 5px 0px 0px;
+        margin: 0 0 0 0;
+        @media (min-width: 1024px) {
+            margin: 0px 5px 0px 0px;
+        }
     }
 
     &__time {   

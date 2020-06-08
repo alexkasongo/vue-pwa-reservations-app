@@ -291,24 +291,44 @@ export default {
         &__container {
             display: flex;
             // height: 100vh;
-            width: 80%;
+            width: 95%;
             margin: auto;
+            flex-direction: column;
+            @media (min-width: 1024px) {
+                width: 80%;
+                flex-direction: row;
+            }
         }
 
         &__left {
-            width: 55%;
-            // margin-left: 10%;
-            // overflow-y: scroll; 
+            width: 100%;
+            @media (min-width: 1024px) {
+                width: 55%;
+            }
         }
 
         &__right {
-            width: 45%;
+            width: 100%;
+            @media (min-width: 1024px) {
+                width: 45%;
+            }
         }
 
         &__map {
             height: 300px; 
             width: 100%;
             margin: 0 0 50px 0;
+        }
+
+        &__left-content {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            margin-right: 14px;
+            padding: 0 0 15px 0;
+            @media (min-width: 1024px) {
+               padding: 0 28px 15px 0;
+            }
         }
 
         &__locations-default {
@@ -349,13 +369,16 @@ export default {
             width: 100%;
             display: flex;
             align-items: center;
-            margin: 5px 0 85px 0;
+            margin: 5px 0 40px 0;
             cursor: pointer;
             
 
             &--pd {
                 // padding: 0 10px 0 15px;
                 width: 100%;
+            }
+            @media (min-width: 1024px) {
+                   margin: 5px 0 85px 0;
             }
 
         }
@@ -481,10 +504,14 @@ export default {
             align-items: center;
         }  
         &__ratings-bottom {
+            display: none;
             height: 70px;
             width: 100%;
             display: flex;
             align-items: center;
+            @media (min-width: 1024px) {
+               display: unset;
+            }
         }  
 
         &__ratings-points {
@@ -516,11 +543,11 @@ export default {
 
         &__ratings-circle {
             background-color: orange;
-            width: 80px;
+            width: 60px;
+            height: 60px;
             padding: 15px;
             border-radius: 50%;
             text-align: center;
-            height: 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -528,12 +555,25 @@ export default {
             color: #fff;
 
             h4 {
-                font-size: 20px;
+                font-size: 14px;
                 margin: 0 0 5px 0;
                 font-weight: 300;
             }
             p {
                 font-weight: 300;
+                font-size: 12px;
+            }
+            @media (min-width: 1024px) {
+               width: 80px;
+               height: 80px;
+               
+               h4 {
+                   font-size: 20px;
+               }
+               p {
+                   font-size: 14px;
+               }
+
             }
         }
 
@@ -556,7 +596,11 @@ export default {
         }
 
         &__search-left {
+            display: none;
             width: 30%;
+            @media (min-width: 1024px) {
+               display: unset;
+            }
         }
 
         &__search-right {
@@ -571,8 +615,11 @@ export default {
         }
 
         &__search-right--pd {
-            padding: 0 10px 0 15px;
+            padding: 0 0 0 0;
             width: 100%;
+            @media (min-width: 1024px) {
+                padding: 0 10px 0 15px;
+            }
         }
 
         &__search-image {
@@ -590,12 +637,15 @@ export default {
                 margin: 0 10px 0 0;
                 background-color: orange;
                 padding: 8px;
-                width: 90px;
+                width: 70px;
                 text-align: center;
                 border-radius: 8px;
                 font-weight: 500;
                 font-size: 14px;
                 color: #fff;
+            }
+            @media (min-width: 1024px) {
+                width: 90px;
             }
 
         }
@@ -608,14 +658,14 @@ export default {
         #hidingScrollBar{
         overflow: hidden;
         }
-        .hideScrollBar{
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        margin-right: 14px;
-        padding-right: 28px; 
-        padding-bottom: 15px;
-        }
+        // .hideScrollBar{
+        // width: 100%;
+        // height: 100%;
+        // overflow: auto;
+        // margin-right: 14px;
+        // padding-right: 28px; 
+        // padding-bottom: 15px;
+        // }
         /*---------------------*/
 
     }

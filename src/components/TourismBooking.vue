@@ -110,7 +110,7 @@ export default {
         flex-direction: column;
 
         @media (min-width: 1024px) {
-            flex-direction: column;
+            flex-direction: row;
             height: 300vh;
         }
     }
