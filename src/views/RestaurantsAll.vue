@@ -246,15 +246,23 @@ export default {
     }
 
     &__tips {
-        width: 70%;
+        width: 90%;
         margin: 0 auto 50px auto;
+        @media (min-width: 1024px) {
+            width: 70%;
+        }
     }
 
     &__tips-title {
         margin: 0 0 25px 0;
 
         h3 {
-            font-size: 28px;
+            font-size: 24px;
+        }
+        @media (min-width: 1024px) {
+           h3 {
+                font-size: 28px;
+            }
         }
     }
 
@@ -292,12 +300,13 @@ export default {
 $font-color: #212a30;
 
 .accordion-two {
-    width: 70%;
+    width: 90%;
     margin: 0 auto 3em auto;
-        @media (min-width: 1024px) {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+    }
 }
 
 .toggle-two {
@@ -325,6 +334,10 @@ $font-color: #212a30;
   padding: 1em 0em 0em 0em;
   display: block;
   color: $font-color;
+  font-size: 12px;
+  @media (min-width: 1024px) {
+     font-size: 20px;
+  }
 }
 .title-two:after, .title-two:before {
   content: '';

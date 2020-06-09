@@ -359,7 +359,7 @@ $font-color: #212a30;
 
 .accordion {
     width: 95%;
-    margin: 0 auto 50px 0;
+    margin: 0 auto 50px auto;
 
     @media (min-width: 570px) {
        width: 100%;
@@ -419,7 +419,7 @@ $font-color: #212a30;
     li {
         a {
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 300;
             color: #212a30;
         }
@@ -459,19 +459,18 @@ $font-color: #212a30;
     .rating-container {
         direction: rtl !important;
         label {
-        display: inline-block;
-        margin: 0;
-        // margin: 0 0 8px 0;
-        color: #d4d4d4;
+            display: inline-block;
+            margin: 0;
+            color: #d4d4d4;
         cursor: pointer;
-        font-size: 12px;
-        transition: color 0.2s;
+            font-size: 12px;
+            transition: color 0.2s;
         }
         input {
-        display: none;
+            display: none;
         }
         label:hover, label:hover ~ label, input:checked ~ label  {
-        color: #E59825;
+            color: #E59825;
         }
     }
 }
