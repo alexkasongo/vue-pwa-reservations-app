@@ -27,6 +27,6 @@ export default {
 
 <style lang="scss">
   .tb__comp {
-    margin: 62px 0 0 0;
+    margin: 82px 0 0 0;
   }
 </style>

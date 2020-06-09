@@ -1,6 +1,8 @@
 <template>
   <div class="tourism">
-    <!-- <NavBar class="navbar-fixed"/> -->
+    <div class="tourism__title">
+        <h2>Security</h2>
+    </div>
     <Booking 
         headline="Search hundreds of security services at once." 
         topheadline="Top Kigali security services" 
@@ -29,3 +31,19 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.tourism {
+  margin: 82px 0 0 0;
+  &__title {
+      width: 95%;
+      margin: 0 auto 10px auto;
+      h2 {
+          font-size: 20px;
+          text-align: center;
+      }
+      @media (min-width: 1024px) {
+          display: none;
+      }
+  }
+}
+</style>

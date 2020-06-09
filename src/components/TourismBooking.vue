@@ -1,6 +1,9 @@
 <template>
     <div class="tb">
         <div class="tb__container">
+            <div class="tb__title">
+                <h2>Tourism</h2>
+            </div>
             <div class="tb__left">
                 <div class="tbcard" v-for="data in info" :key="data.id">
                     <div class="tbcard__searchbox-up" :style="{ backgroundImage: `url(${data.url})` }"></div>
@@ -113,6 +116,18 @@ export default {
         @media (min-width: 1024px) {
             flex-direction: row;
             height: 300vh;
+        }
+    }
+
+    &__title {
+        width: 95%;
+        margin: 0 auto 0 auto;
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+        @media (min-width: 1024px) {
+            display: none;
         }
     }
 

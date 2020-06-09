@@ -1,5 +1,8 @@
 <template>
   <div class="restaurants">
+    <div class="restaurants__title">
+        <h2>Restaurants</h2>
+    </div>
     <Booking 
       headline="Find and book a restaurant." 
       topheadline="Top Kigali cuisines" 
@@ -33,3 +36,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.restaurants {
+  margin: 82px 0 0 0;
+  &__title {
+      width: 95%;
+      margin: 0 auto 10px auto;
+      h2 {
+          font-size: 20px;
+          text-align: center;
+      }
+      @media (min-width: 1024px) {
+          display: none;
+      }
+  }
+}
+</style>

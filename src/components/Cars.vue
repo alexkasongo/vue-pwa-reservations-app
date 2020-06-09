@@ -2,7 +2,7 @@
     <div class="cars">
         <div class="cars__search">
             <div class="cars__title">
-                <h2>Hotels</h2>
+                <h2>Transport</h2>
             </div>
             <div class="cars__search-bar">
                 <Search :routeName="this.$route.name"/>

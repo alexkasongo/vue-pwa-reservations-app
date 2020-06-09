@@ -1,7 +1,7 @@
 <template>
   <div class="clubs">
     <div class="clubs__title">
-        <h2>Hotels</h2>
+        <h2>Night Clubs</h2>
     </div>
     <div class="clubs__bookings">
       <Booking 
