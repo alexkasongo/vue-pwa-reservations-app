@@ -216,7 +216,7 @@ export default {
 
 <style lang="scss">
 .booking {
-    margin: 120px auto;
+    // margin: 120px auto;
     
     @media (min-width: 570px) {
         width: 90%;

@@ -1,6 +1,9 @@
 <template>
     <div class="cars">
         <div class="cars__search">
+            <div class="cars__title">
+                <h2>Hotels</h2>
+            </div>
             <div class="cars__search-bar">
                 <Search :routeName="this.$route.name"/>
             </div>
@@ -106,7 +109,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .cars {
-    // padding: 0 0 0 2%;
+    &__title {
+        width: 95%;
+        margin: 0 auto 10px auto;
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
 
     &__search {
         // width: 80%;

@@ -1,6 +1,9 @@
 <template>
     <div class="hbbody">
         <div class="hbtop">
+            <div class="hbtop__title">
+                <h2>Hotels</h2>
+            </div>
             <div class="hbtop__hbsearch">
                 <Search />
             </div>
@@ -317,6 +320,18 @@ export default {
     }
 
     .hbtop {
+        &__title {
+            width: 95%;
+            margin: 0 auto 10px auto;
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+            @media (min-width: 1024px) {
+               display: none;
+            }
+        }
+
         background-color: #fafafa;
         padding: 20px 0 30px 0;
         border-bottom: 1px solid #e5ebf0;

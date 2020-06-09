@@ -162,7 +162,12 @@
             </div>
             <!-- actual rest -->
             <div class="rest__right">
-                <SearchRest class="rest__searchrest"/>
+                <div class="rest__reserve-container">
+                    <div class="rest__reserve">
+                        <h2>Make a Reservation</h2>
+                    </div>
+                    <SearchRest class="rest__searchrest"/>
+                </div>
 
                 <div class="rest__map">
                     <l-map
@@ -312,6 +317,20 @@ export default {
             @media (min-width: 1024px) {
                 width: 45%;
             }
+        }
+
+        &__reserve {
+            margin: 0 0 10px 0;
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        &__reserve-container {
+            padding: 10px 10px 20px 10px;
+            margin: 0 0 20px 0;
+            box-shadow: 0 0 0 .5pt #ccc;
+            border-radius: 8px;
         }
 
         &__map {
@@ -658,9 +677,9 @@ export default {
 
         }
 
-        .searchrest {
-            margin: 0 0 60px 0;
-        }
+        // .searchrest {
+        //     margin: 0 0 0 0;
+        // }
 
         /*------THE TRICK------*/
         #hidingScrollBar{
