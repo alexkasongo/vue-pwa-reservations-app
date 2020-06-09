@@ -109,8 +109,8 @@ export default {
       },
       styleC: {
         height: 'calc(100vh - 62px)',
-        position: "fixed",
-        width: '49%',
+        position: "sticky",
+        width: '100%',
         
       },
       styleD: {

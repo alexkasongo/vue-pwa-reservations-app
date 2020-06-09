@@ -28,5 +28,8 @@ export default {
 <style lang="scss">
   .tb__comp {
     margin: 82px 0 0 0;
+    @media (min-width: 1024px) {
+       margin: 62px 0 0 0;
+    }
   }
 </style>

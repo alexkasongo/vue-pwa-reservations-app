@@ -359,7 +359,7 @@ $font-color: #212a30;
 
 .accordion {
     width: 95%;
-    margin: auto;
+    margin: 0 auto 50px 0;
 
     @media (min-width: 570px) {
        width: 100%;
