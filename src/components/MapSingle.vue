@@ -113,36 +113,16 @@ export default {
         width: '100%',
         
       },
-      styleD: {
-        // height: '400px',
-        
-      },
+      styleD: {},
       stickyA: {
         position: "-webkit-sticky",
         position: "sticky",
         top: "62px"
       },
-      stickyB: {
-        // position: "-webkit-sticky",
-        // position: "sticky",
-        // top: "62px"
-      },
-      // css: {
-      //   height: 'calc(100vh - 172px)',
-      //   position: "fixed",
-      //   width: '49%',
-        
-      // }
+      stickyB: {}
     };
   },
-  mounted() {
-    // const URL = "https://api.pexels.com/v1/search?query=food&per_page=8"
-    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
-    //   .then((result) => {
-    //     this.info = result.data.photos
-    // })
-  },
+  mounted() {},
   methods: {
     zoomUpdate(zoom) {
       this.currentZoom = zoom;
@@ -158,29 +138,17 @@ export default {
     }
   },
   computed: {
-    css () {
+    css() {
 
       const height = 'calc(100vh - 172px)'
       const width = '49%'
-      // const position = 'fixed'
       const media = `@media (min-width: 1024px) {position: fixed;}`
 
-      // if (window.matchMedia("(min-width: 1024px)").matches) {
         return {
           height,
           width,
-          // position,
           media
         }
-      // } 
-
-      // if(window.matchMedia("(max-width: 570px)").matches) {
-      //   return {
-      //     height,
-      //     width: '49%',
-      //     position: 'block'
-      //   }
-      // }
     }
   }
 };
