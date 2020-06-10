@@ -1,5 +1,8 @@
 # rwandan-concierge-agency
 
+# Example
+![background generator](https://i.imgur.com/awIj69X.mp4)
+
 ## Project setup
 ```
 npm install
