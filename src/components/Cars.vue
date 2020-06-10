@@ -95,7 +95,7 @@ export default {
         }
     },
     mounted() {
-        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=16"
+        const URL = "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=16"
         this.axios.get(URL)
         .then((result) => {
             this.info = result.data

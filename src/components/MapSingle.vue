@@ -89,7 +89,7 @@ export default {
       center: latLng(47.41322, -1.219482),
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
-        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
       withPopup: latLng(47.41322, -1.219482),
       withTooltip: latLng(47.41422, -1.250482),
       currentZoom: 11.5,

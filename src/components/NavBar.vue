@@ -259,7 +259,7 @@ export default {
         transition: .5s;
         width: 0;
         z-index: 1000;
-        // margin: 62px 0 0 0 !important;
+        margin: 62px 0 0 0 !important;
     }
 
 /*

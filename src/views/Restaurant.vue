@@ -237,7 +237,7 @@ export default {
             center: latLng(47.41322, -1.219482),
             url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             attribution:
-                '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+                '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
             withPopup: latLng(47.41322, -1.219482),
             withTooltip: latLng(47.41422, -1.250482),
             currentZoom: 11.5,
@@ -259,7 +259,7 @@ export default {
         //     this.info = result.data.photos
         // })
 
-        const URL = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
+        const URL = "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
         this.axios.get(URL)
         .then((result) => {
             this.info = result.data
