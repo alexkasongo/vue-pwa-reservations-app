@@ -1,7 +1,7 @@
 # rwandan-concierge-agency
 
 # Example
-![background generator](https://i.imgur.com/awIj69X.mp4)
+![background generator](https://i.imgur.com/HhbWPz2.png)
 
 ## Project setup
 ```
