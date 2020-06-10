@@ -135,7 +135,7 @@ export default {
         width: 100%;
         margin-top: 20px;
         @media (min-width: 1024px) {
-            margin-top: 0;
+            margin-top: 20px;
         }
 
         @media (min-width: 1024px) {

@@ -125,6 +125,7 @@ export default {
         // width: 80%;
         padding: 82px 0 30px 0;
         @media (min-width: 1024px) {
+            padding: 20px 0 30px 0;
             margin: 62px 0 0 0;
         }
         background: #fff;
