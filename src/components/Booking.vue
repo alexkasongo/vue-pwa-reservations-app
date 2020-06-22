@@ -12,9 +12,6 @@
         <div class="booking__rec-title">
             <h3 class="booking__rec-title--left">{{ topheadline }}</h3>
             <h3 class="booking__rec-title--right">
-                <!-- <a class="booking__rec-link" href="#">
-                    See all
-                </a> -->
                 <router-link class="booking__rec-link" to="/deep-search"><h2>See all</h2></router-link>
             </h3>
         </div>
@@ -205,9 +202,7 @@ export default {
             const today = new Date();
             const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
             const time = today.getHours() + ":" + today.getMinutes();
-            // const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             const dateTime = time;
-            // const dateTime = date +' '+ time;
             this.timestamp = dateTime;
         }
     },
