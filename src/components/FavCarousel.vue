@@ -38,13 +38,6 @@ export default {
       }
   },
   mounted() {
-    // const URL = "https://api.pexels.com/v1/search?query=food&per_page=4"
-    // const AuthStr = 'Bearer ' + "563492ad6f91700001000001475af9cf9f8342748b8ed088c1b32b43";
-    // this.axios.get(URL, { 'headers': { 'Authorization': AuthStr } })
-    //   .then((result) => {
-    //     this.info = result.data.photos
-    // })
-
     const URL = "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
     this.axios.get(URL)
       .then((result) => {
@@ -124,7 +117,6 @@ export default {
     }
 
     &__margin {
-        // height: 52px;
         margin: 0 0 10px 0;
     }
 
