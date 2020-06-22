@@ -1,8 +1,6 @@
 <template>
   <div class="hero">
     <div class="hero__container">
-<!-- d    <div class="hero__container"  v-for="data in info" :key="data.id"> -->
-
       <div class="hero__hero" :style="{ backgroundImage: `url(${image})` }">
         <div class="hero__titles">
             <h2>{{title}}</h2>
@@ -40,19 +38,6 @@ export default {
 
     &__background {
         background-color: #fff;
-    }
-
-    &__container {
-        
-        // @media (min-width: 570px) {
-        //    width: 90%;
-        //    margin: auto;
-        // }
-
-        // @media (min-width: 1024px) {
-        //    width: 80%;
-        //    margin: auto;
-        // }
     }
 
     &__hero {

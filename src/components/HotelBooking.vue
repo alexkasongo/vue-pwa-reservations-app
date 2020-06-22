@@ -272,8 +272,6 @@
                 
             </div>
             <div class="hotelb__right">
-                <!-- <div class="hotelb__right-notifications">notifications</div>
-                <div class="hotelb__right-compare">compare</div> -->
             </div>
         </div>
     </div>
