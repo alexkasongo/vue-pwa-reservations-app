@@ -138,7 +138,7 @@ export default {
     }
 
     &__date {
-        // width: 100%;
+        width: 100%;
         margin-top: 5px;
 
         @media (min-width: 570px) {
@@ -164,6 +164,7 @@ export default {
         border: none; 
         font-size: 14px;
         padding: 12px 20px;
+        width: 100%;
     }
 
     input[type=text] {
