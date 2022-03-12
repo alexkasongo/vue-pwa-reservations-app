@@ -11,8 +11,7 @@
                 </div>
                 <div class="search__grid-middle">
                     <div class="search__date">
-                        <!-- <input type="date" name="dateofreservation" id="dateofreservation"> -->
-                        <vc-date-picker 
+                        <!-- <vc-date-picker 
                             mode='range'
                             v-model='range'
                             :columns="$screens({ default: 1, lg: 2 })"
@@ -21,7 +20,16 @@
                                 placeholder: this.date,
                                 readonly: true
                             }'
-                        />
+                        /> -->
+                        <vc-date-picker v-model="date">
+                            <template v-slot="{ inputValue, inputEvents }">
+                                <input
+                                class="search__calendar"
+                                :value="inputValue"
+                                v-on="inputEvents"
+                                />
+                            </template>
+                        </vc-date-picker>
                     </div>
                     <div class="search__guests">
                         <input type="text" placeholder="2 guests">
@@ -130,7 +138,7 @@ export default {
     }
 
     &__date {
-        width: 100%;
+        // width: 100%;
         margin-top: 5px;
 
         @media (min-width: 570px) {
@@ -147,6 +155,15 @@ export default {
 
     &__time {   
         width: 100%;
+    }
+
+    &__calendar {
+        height: 46px; 
+        background-color: #EEEEEE; 
+        border-radius: 8px; 
+        border: none; 
+        font-size: 14px;
+        padding: 12px 20px;
     }
 
     input[type=text] {

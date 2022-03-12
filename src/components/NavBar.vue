@@ -10,9 +10,14 @@
                 ]"
             >
             <div class="navbar__left">
-                <div class="navbar__logo">
-                    <router-link to="/"><h2 v-if="routeName === 'Home'" class="navbar__logo-active">Logo</h2></router-link>
-                    <router-link to="/"><h2 v-if="routeName !== 'Home'" class="navbar__logo-not-active">Logo</h2></router-link>
+                <div>
+                    <!-- <router-link to="/"><h2 v-if="routeName === 'Home'" class="navbar__logo-active">Logo</h2></router-link> -->
+                    <router-link to="/">
+                        <div>
+                            <img class="navbar__logo" :src="image"/>
+                        </div>
+                    </router-link>
+                    <!-- <router-link to="/"><h2 v-if="routeName !== 'Home'" class="navbar__logo-not-active">Logo</h2></router-link> -->
                 </div>
         <!-- <div v-bind:style= "[routeName === 'Home' ? styleA : styleB]"><p style="color:red;">ALEKO</p></div> -->
                 <div class="navbar__more">
@@ -69,6 +74,7 @@
 
 <script>
 import { Slide } from 'vue-burger-menu' 
+import image from "../assets/logo.png"
 
 export default {
     name: 'NavBar',
@@ -77,6 +83,7 @@ export default {
     },
     data() {
         return {
+            image: image,
             transitionName: null,
             routeName: null,
             styleA: {
@@ -144,11 +151,13 @@ export default {
 
         &__logo {
 
-            a {
-                text-decoration: none;
-                color: orange;
-                font-weight: 600;
-            }
+            // a {
+            //     text-decoration: none;
+            //     color: orange;
+            //     font-weight: 600;
+            // }
+            height: 25px;
+            width: 125px;
         }
 
         &__logo-active {

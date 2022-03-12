@@ -1,4 +1,4 @@
-# rwandan-concierge-agency
+# Trip Nziza LLC
 
 # Example
 ![background generator](https://i.imgur.com/HhbWPz2.png)
