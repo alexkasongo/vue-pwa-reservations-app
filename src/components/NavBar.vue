@@ -150,12 +150,6 @@ export default {
         }
 
         &__logo {
-
-            // a {
-            //     text-decoration: none;
-            //     color: orange;
-            //     font-weight: 600;
-            // }
             height: 25px;
             width: 125px;
         }

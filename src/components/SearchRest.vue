@@ -7,7 +7,6 @@
                 </div>
                 <div class="searchrest__grid-middle">
                     <div class="searchrest__date">
-                        <!-- <input type="date" name="dateofreservation" id="dateofreservation"> -->
                         <vc-date-picker 
                             mode='range'
                             v-model='range'
