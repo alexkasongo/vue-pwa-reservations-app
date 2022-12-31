@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-pwa": "~4.3.0",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-pwa": "~5.0.8",
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-plugin-vuex": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
+    "@vue/cli-service": "~5.0.8",
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
